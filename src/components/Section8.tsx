@@ -1,18 +1,20 @@
 import React from 'react';
 import mainImage from '../assets/images/pngfondosimagenes-08.png';
 import { playersData } from '../data/playersData';
+import { useTranslation } from 'react-i18next';
 
 
 const Section8: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full  flex flex-col items-center py-10 px-5">
       {/* Contenedor principal dividido en dos */}
       <div className="w-full relative flex flex-row sm:flex-row items-center justify-between mb-10">
         {/* Título en columna */}
         <div className="w-full  flex flex-col pl-10 items-start leading-tight font-bold text-[#0c0c6c]">
-          <p className="ml-0 sm:ml-5 text-[2rem] sm:text-[5rem]">Posibles </p>
-          <p className="ml-5 sm:ml-20 text-[1.4rem] sm:text-[3rem] mt-[-0.6rem] sm:mt-[-1rem]">invitados</p>
-          <p className="ml-8 sm:ml-40 text-[1.5rem] sm:text-[3.5rem] mt-[-0.6rem] sm:mt-[-1rem]">especiales</p>
+        <p className="ml-0 sm:ml-5 text-[2rem] sm:text-[5rem]">{t('section8_title_line1')}</p>
+        <p className="ml-5 sm:ml-20 text-[1.4rem] sm:text-[3rem] mt-[-0.6rem] sm:mt-[-1rem]">{t('section8_title_line2')}</p>
+        <p className="ml-8 sm:ml-40 text-[1.5rem] sm:text-[3.5rem] mt-[-0.6rem] sm:mt-[-1rem]">{t('section8_title_line3')}</p>
         </div>
 
         {/* Imagen */}

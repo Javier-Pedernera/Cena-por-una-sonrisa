@@ -6,8 +6,10 @@ import logo3 from '../assets/images/logosyvectores-03.svg';
 import logo4 from '../assets/images/logosyvectores-01.svg';
 import logo5 from '../assets/images/logosyvectores-08.svg';
 import svg4 from '../assets/images/logosyvectores-05.svg';
+import { useTranslation } from 'react-i18next';
 
 const Section6: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section
       className="relative py-5 sm:py-0 w-full h-[60vh] sm:h-[70vh] flex items-center justify-center bg-cover bg-center"
@@ -22,20 +24,20 @@ const Section6: React.FC = () => {
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
         <div className="w-full h-[80%] flex flex-col justify-between sm:w-[45%] bg-white p-5 sm:py-20 rounded-lg shadow-lg">
           <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center">
-            Apertura del Mundial de Clubes 2025
+          {t('section6_opening_title')}
           </p>
           <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
-            Fecha: [Añadir fecha precisa]
+          {t('section6_opening_info')}
             <br />
-            Lugar: Hard Rock Café, Miami.
+            {t('section6_closing_title')}
           </p>
           <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center mt-5">
-            Cierre del Mundial de Clubes 2025
+          {t('section6_closing_info')}
           </p>
           <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
-            Fecha: [Añadir fecha precisa]
+          {t('section6_title')}
             <br />
-            Lugar: Hard Rock Café, Nueva York.
+            {t('section6_subtitle')}
           </p>
         </div>
 

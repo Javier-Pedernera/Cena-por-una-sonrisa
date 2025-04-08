@@ -5,8 +5,10 @@ import star2 from '../assets/images/logosyvectores-04.svg';
 import instagramIcon from '../assets/images/logosyvectores-10.svg';
 import facebookIcon from '../assets/images/logosyvectores-11.svg';
 import whatsappIcon from '../assets/images/logosyvectores-12.svg';
+import { useTranslation } from 'react-i18next';
 
 const Section13: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section 
       className="relative w-full flex flex-col sm:flex-row py-4 sm:py-10 bg-cover bg-center text-white"
@@ -14,10 +16,10 @@ const Section13: React.FC = () => {
     >
       {/* Lado Izquierdo */}
       <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 py-10 sm:px-20 text-left font-poppins">
-        <h2 className="text-4xl sm:text-6xl font-bold">Gracias!</h2>
+        <h2 className="text-4xl sm:text-6xl font-bold">{t('section13_title')}</h2>
         <div className="mt-6 grid grid-cols-2 gap-4">
           <div className="text-[0.6rem] sm:text-[1.1rem]">
-            <h3 className="text-xl font-semibold">Contacto</h3>
+            <h3 className="text-xl font-semibold">{t('section13_subtitle')}</h3>
             <p>www.loca-agency.com</p>
             <p>Buenos Aires | Argentina</p>
             <div className="mt-4 flex flex-col gap-2">

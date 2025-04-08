@@ -1,7 +1,9 @@
 import React from 'react';
 import star from '../assets/images/logosyvectores-05.svg';
+import { useTranslation } from 'react-i18next';
 
 const Section10: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative h-full w-full flex flex-col sm:flex-row justify-between items-start sm:pb-20 pt-16 bg-[#111C46] text-white">
       {/* Imágenes superpuestas en el centro */}
@@ -14,20 +16,17 @@ const Section10: React.FC = () => {
       {/* Contenido lado izquierdo dividido en dos partes */}
       <div className="w-full sm:w-1/2 sm:px-20 text-left font-poppins flex flex-col justify-start h-full">
         <div className="w-[90%] ml-[5%] sm-ml-0 justify-center sm:w-full sm:h-1/2 flex flex-col sm:justify-start">
-          <h2 className="text-[3rem] ml-10 sm:ml-0 sm:text-[5rem] font-bold leading-tight">Propósito</h2>
-          <h2 className="text-[2rem] ml-35 sm:ml-40 mt-[-1rem] sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">de la cena</h2>
+          <h2 className="text-[3rem] ml-10 sm:ml-0 sm:text-[5rem] font-bold leading-tight">{t('section10_title1')}</h2>
+          <h2 className="text-[2rem] ml-35 sm:ml-40 mt-[-1rem] sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">{t('section10_title2')}</h2>
           <p className="mt-2 sm:mt-4 sm:mt-10  text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-            Las cenas a beneficio de la Fundación PUPI tienen un objetivo claro: 
-            recaudar fondos para seguir ayudando a niños y adolescentes en situación de vulnerabilidad.
+          {t('section10_text1')}
           </p>
         </div>
         <div className="w-[90%] ml-[5%] sm:w-full mt-4 sm:mt-14 sm:h-1/2 flex flex-col justify-start">
-          <h2 className="text-[3rem] ml-10 sm:text-3xl sm:text-[5rem] font-bold leading-tight">Cómo</h2>
-          <h2 className="text-[2rem] ml-25 mt-[-1rem] sm:text-3xl sm:ml-28 sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">participar</h2>
+          <h2 className="text-[3rem] ml-10 sm:text-3xl sm:text-[5rem] font-bold leading-tight">{t('section10_title3')}</h2>
+          <h2 className="text-[2rem] ml-25 mt-[-1rem] sm:text-3xl sm:ml-28 sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">{t('section10_title4')}</h2>
           <p className="mt-2 sm:mt-4 sm:mt-10 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-            Para sumarse a esta causa solidaria, los interesados podrán adquirir sus entradas 
-            a través de la plataforma de venta de entradas ticketmaster. Las entradas estarán disponibles 
-            en diferentes categorías, adaptadas a las preferencias de cada participante.
+          {t('section10_text2')}
           </p>
         </div>
       </div>
@@ -35,33 +34,25 @@ const Section10: React.FC = () => {
       {/* Contenido lado derecho */}
       <div className="w-[90%] ml-[5%] sm:w-1/2 sm:px-20 text-left font-poppins mt-10 sm:mt-0">
         <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Cada aporte permite continuar con los programas que buscan
-          mejorar su calidad de vida y ofrecerles oportunidades que
-          hagan la diferencia.
+        {t('section10_text3')}
         </p>
         <p className="mt-4 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Estas noches especiales aprovechan el poder del fútbol como
-          motor de cambio, uniendo a exjugadores y aficionados en un
-          evento lleno de solidaridad.
+        {t('section10_text4')}
         </p>
         <p className="mt-4 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Participar no solo ayuda a recaudar fondos, sino también a
-          generar conciencia sobre la importancia de construir un futuro
-          más justo para quienes más lo necesitan.
+        {t('section10_text5')}
         </p>
-        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">Entrada General</h3>
+        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_general')}</h3>
         <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Incluye acceso a la cena y participación en todas las actividades programadas.
+          {t('section10_general_text')}
         </p>
-        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">Entrada VIP</h3>
+        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_vip')}</h3>
         <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Con acceso exclusivo a los invitados especiales, permitiendo
-          interactuar personalmente con exjugadores de fútbol y disfrutar de beneficios adicionales.
+        {t('section10_vip_text')}
         </p>
-        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">Mesa Corporativa</h3>
+        <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_corp')}</h3>
         <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
-          Ideal para empresas y grupos, con una mesa reservada y
-          reconocimiento especial durante el evento.
+        {t('section10_corp_text')}
         </p>
       </div>
 
