@@ -30,7 +30,7 @@ const Section1: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${img1})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}}>
+    <section className="w-full py-3 sm:py-0 h-auto bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${img1})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}}>
       <div className="flex flex-row flex-wrap  w-[100%]  h-full">
       <div className="absolute top-4 right-2 sm:top-10 sm:right-15 z-50" ref={menuRef}>
         <div className="relative">

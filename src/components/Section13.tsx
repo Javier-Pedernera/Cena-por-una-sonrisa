@@ -57,7 +57,7 @@ const Section13: React.FC = () => {
       {/* Lado Derecho */}
       <div className="w-full mb-5 sm:mb-10 sm:w-1/2 relative flex justify-center items-center">
         {/* Imagen superior izquierda */}
-        <img src={star1} alt="Imagen adicional 1" className="absolute bottom-0 sm:bottom-0 left-13 sm:left-30 w-16 sm:w-24" />
+        <img src={star1} alt="Imagen adicional 1" className="absolute bottom-0 sm:bottom-0 left-13 sm:left-20 w-16 sm:w-24" />
         {/* Imagen inferior derecha */}
         <img src={star2} alt="Imagen adicional 2" className="absolute bottom-0 left-38sm:bottom-0 sm:left-50 sm:left-0 w-16 sm:w-24" />
       </div>

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Section2: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="w-full py-20 flex flex-col sm:flex-row items-center justify-center py-10">
+    <section className="w-full py-5 sm:py-20 flex flex-col sm:flex-row items-center justify-center py-10">
       {/* Parte izquierda con el logo */}
       <div className="w-full sm:w-[40%] flex justify-center items-center">
         <img src={logo} alt="Logo" className="w-1/3 mb-5 sm:mb-0 sm:w-2/3" />
