@@ -10,14 +10,14 @@ import { useTranslation } from 'react-i18next';
 const Section13: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section 
-      className="relative w-full flex flex-col sm:flex-row py-4 sm:py-10 bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }}
-    >
+    <section
+  className="relative w-full flex flex-col sm:flex-row py-2 sm:py-14 bg-[#111C46] bg-contain sm:bg-cover bg-bottom sm:bg-center bg-no-repeat text-white"
+  style={{ backgroundImage: `url(${backgroundImage})` }}
+>
       {/* Lado Izquierdo */}
-      <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 py-10 sm:px-20 text-left font-poppins">
+      <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 pb-30 pt-5 sm:py-10 sm:px-20 text-left font-poppins">
         <h2 className="text-4xl sm:text-6xl font-bold">{t('section13_title')}</h2>
-        <div className="mt-6 grid grid-cols-2 gap-4">
+        <div className="sm:mt-6 grid grid-cols-2 gap-4">
           <div className="text-[0.6rem] sm:text-[1.1rem]">
             <h3 className="text-xl font-semibold">{t('section13_subtitle')}</h3>
             <p>www.loca-agency.com</p>
@@ -57,9 +57,9 @@ const Section13: React.FC = () => {
       {/* Lado Derecho */}
       <div className="w-full mb-5 sm:mb-10 sm:w-1/2 relative flex justify-center items-center">
         {/* Imagen superior izquierda */}
-        <img src={star1} alt="Imagen adicional 1" className="absolute sm:bottom-0 left-20 sm:left-30 w-16 sm:w-24" />
+        <img src={star1} alt="Imagen adicional 1" className="absolute bottom-0 sm:bottom-0 left-13 sm:left-30 w-16 sm:w-24" />
         {/* Imagen inferior derecha */}
-        <img src={star2} alt="Imagen adicional 2" className="absolute sm:bottom-0 left-50 sm:left-0 w-16 sm:w-24" />
+        <img src={star2} alt="Imagen adicional 2" className="absolute bottom-0 left-38sm:bottom-0 sm:left-50 sm:left-0 w-16 sm:w-24" />
       </div>
     </section>
   );

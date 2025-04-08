@@ -32,13 +32,13 @@ const Section1: React.FC = () => {
   return (
     <section className="w-full h-auto bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${img1})`, backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}}>
       <div className="flex flex-row flex-wrap  w-[100%]  h-full">
-      <div className="absolute top-4 right-2 sm:top-6 sm:right-6 z-50" ref={menuRef}>
+      <div className="absolute top-4 right-2 sm:top-10 sm:right-15 z-50" ref={menuRef}>
         <div className="relative">
         <button
           onClick={() => setOpen(!open)}
           className="appearance-none bg-white/2 hover:bg-white/4 text-white px-1 py-0.5 sm:px-2 sm:py-1 rounded-full text-sm font-medium backdrop-blur-xs sm:backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
         >
-          <img src={iconTranslation} alt="translate" className="w-5 h-5  sm:w-10 sm:h-10 " />
+          <img src={iconTranslation} alt="translate" className="w-5 h-5  sm:w-12 sm:h-12 " />
           {/* {i18n.language.toUpperCase()} */}
         </button>
 
