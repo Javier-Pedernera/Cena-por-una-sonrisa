@@ -14,10 +14,14 @@
     "section5_paragraph": "Además de la recaudación de fondos, estas cenas ofrecerán a los asistentes una experiencia única, con la participación de exfutbolistas reconocidos mundialmente.\nLa oportunidad de compartir una velada exclusiva con figuras emblemáticas del fútbol hará que el evento sea inolvidable, creando un ambiente de camaradería y apoyo a la causa.\n\nAl asistir a estas cenas, los invitados no solo disfrutarán de una noche especial, sino que también estarán contribuyendo directamente al trabajo de la Fundación PUPI, ayudando a mejorar la vida de cientos de niños y sus familias.",
     "section6_title": "Detalles",
     "section6_subtitle": "del evento",
+    "section6_date":"Fecha:",
+    "section6_location":"Lugar: ",
     "section6_opening_title": "Apertura del Mundial de Clubes 2025",
-    "section6_opening_info": "Fecha: [Añadir fecha precisa]\nLugar: Hard Rock Café, Miami.",
+    "section6_opening_date_info": "[Añadir fecha precisa]",
+    "section6_opening_location_info": "Hard Rock Café, Miami.",
     "section6_closing_title": "Cierre del Mundial de Clubes 2025",
-    "section6_closing_info": "Fecha: [Añadir fecha precisa]\nLugar: Hard Rock Café, Nueva York.",
+    "section6_closing_date_info": "[Añadir fecha precisa]",
+    "section6_closing_location_info": "Hard Rock Café, Nueva York.",
     "section7_text": "Uno de los grandes atractivos de las cenas a beneficio de la Fundación PUPI será la participación de destacados exjugadores de fútbol, quienes han dejado una marca imborrable en la historia de este deporte.\n\nFiguras emblemáticas que, a lo largo de sus carreras, no solo han sido reconocidas por su talento en el campo de juego, sino también por su compromiso con causas sociales y su cercanía con los aficionados.\n\nEstos invitados especiales no solo contribuirán con su presencia al éxito del evento, sino que brindarán a los asistentes la oportunidad única de compartir una velada íntima con sus ídolos. Los asistentes tendrán la posibilidad de interactuar directamente con ellos, compartir conversaciones, obtener autógrafos e incluso fotografiarse junto a estas leyendas del fútbol.\n\nLa cercanía con estas figuras del deporte convertirá la cena en una experiencia inolvidable, creando un ambiente de camaradería y emoción, donde los asistentes podrán vivir de cerca el legado de grandes jugadores. Además, su participación refuerza el espíritu de la cena: unir el poder del fútbol con el compromiso social para generar un impacto positivo en la vida de los más vulnerables.\n\nEstos exjugadores no solo han sido protagonistas de momentos icónicos en el deporte, sino que ahora se suman a una causa noble, apoyando con su presencia y su voz el trabajo que la Fundación PUPI realiza día a día.",
     "section8_title_line1": "Posibles",
     "section8_title_line2": "invitados",
@@ -44,5 +48,23 @@
     "section12_p2": "La difusión incluirá anuncios en redes sociales, campañas de email marketing dirigidas a la comunidad de la fundación, y colaboraciones con influencers y embajadores del fútbol que se sumarán para promover la causa. Además, contaremos con el apoyo de medios de comunicación que ayudarán a amplificar el mensaje y generar conciencia sobre la labor de la Fundación PUPI.",
     "section12_p3": "El objetivo es no solo atraer a potenciales donantes y participantes, sino también sensibilizar al público en general sobre la importancia de apoyar a los niños en situación de vulnerabilidad, destacando cómo el fútbol puede ser una poderosa herramienta para generar un cambio social positivo.",
     "section13_title": "Gracias!",
-    "section13_subtitle": "Contacto"
+    "section13_subtitle": "Contacto",
+    "dinnerForm": {
+      "description": "Son dos cenas solidarias organizado por la Fundación PUPI con el objetivo de recaudar fondos para continuar su labor en beneficio de niños y adolescentes en situación de vulnerabilidad.",
+      "name_label": "Nombre y Apellido",
+      "address_label": "Domicilio - País",
+      "dinner_label": "Cena a la cual asistís",
+      "input_placeholder": "Escriba su respuesta",
+      "send_button": "Enviar",
+      "required_notice": "Los campos marcados con * son obligatorios.",
+      "alert_captcha": "Por favor, completá el reCAPTCHA.",
+      "alert_sent": "¡Formulario enviado correctamente!",
+      "alert_required": "Por favor, completá todos los campos obligatorios.",
+      "options": {
+        "miami": "Miami",
+        "nyc": "NYC",
+        "both": "Ambas",
+        "others": "Otras"
+      }
+    }
   }

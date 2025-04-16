@@ -14,7 +14,9 @@ const Section11: React.FC = () => {
     >
       {/* Imagen centrada en mobile */}
       <div className="block sm:hidden absolute top-5 left-[65%]">
-        <img src={centeredImage} alt="Imagen destacada" className="w-25 mx-auto" />
+        <a href="https://live.tickethoy.com/" target="_blank" rel="noopener noreferrer">
+          <img src={centeredImage} alt="Imagen destacada" className="w-25 mx-auto cursor-pointer" />
+        </a>
       </div>
 
       {/* Contenido izquierdo */}
@@ -26,7 +28,9 @@ const Section11: React.FC = () => {
 
       {/* Imagen posicionada en desktop */}
       <div className="hidden sm:block absolute top-8 left-[55%] sm:left-[57%]">
-        <img src={centeredImage} alt="Imagen destacada" className="w-40 sm:w-54" />
+        <a href="https://live.tickethoy.com/" target="_blank" rel="noopener noreferrer">
+          <img src={centeredImage} alt="Imagen destacada" className="w-40 sm:w-54" />
+        </a>
       </div>
     </section>
   );

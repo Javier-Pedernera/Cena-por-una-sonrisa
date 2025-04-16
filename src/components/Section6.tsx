@@ -2,7 +2,10 @@ import React from 'react';
 import backgroundImage from '../assets/images/pngfondosimagenes-06.png';
 import logo1 from '../assets/images/logosyvectores-07.svg';
 import logo2 from '../assets/images/logosyvectores-04.svg';
-import logo3 from '../assets/images/logosyvectores-03.svg';
+import svgLogoEs from '../assets/images/logosyvectores-03.svg'; 
+import svgLogoEn from '../assets/images/logosyvectores-03_eng.svg'; 
+import svgLogoIt from '../assets/images/logosyvectores-03_ita.svg'; 
+import i18n from '../i18n';
 import logo4 from '../assets/images/logosyvectores-01.svg';
 import logo5 from '../assets/images/logosyvectores-08.svg';
 import svg4 from '../assets/images/logosyvectores-05.svg';
@@ -10,6 +13,19 @@ import { useTranslation } from 'react-i18next';
 
 const Section6: React.FC = () => {
   const { t } = useTranslation();
+
+  const getSvgLogoByLanguage = () => {
+    switch (i18n.language) {
+      case 'en':
+        return svgLogoEn;
+      case 'it':
+        return svgLogoIt;
+      case 'es':
+      default:
+        return svgLogoEs;
+    }
+  };
+
   return (
     <section
       className="relative py-5 sm:py-0 w-full h-[60vh] sm:h-[70vh] flex items-center justify-center bg-cover bg-center"
@@ -23,26 +39,29 @@ const Section6: React.FC = () => {
       <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-20">
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
         <div className="w-full h-[80%] flex flex-col justify-between sm:w-[45%] bg-white p-5 sm:py-20 rounded-lg shadow-lg">
-          <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center">
+        {/* Apertura */}
+        <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center">
           {t('section6_opening_title')}
-          </p>
-          <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
-          {t('section6_opening_info')}
-            <br />
-            {t('section6_closing_title')}
-          </p>
-          <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center mt-5">
-          {t('section6_closing_info')}
-          </p>
-          <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
-          {t('section6_title')}
-            <br />
-            {t('section6_subtitle')}
-          </p>
-        </div>
+        </p>
+        <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
+          <span className="font-bold">{t('section6_date')}</span> {t('section6_opening_date_info')}
+          <br />
+          <span className="font-bold">{t('section6_location')}</span> {t('section6_opening_location_info')}
+        </p>
+
+        {/* Cierre */}
+        <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center mt-5">
+          {t('section6_closing_title')}
+        </p>
+        <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
+          <span className="font-bold">{t('section6_date')}</span> {t('section6_closing_date_info')}
+          <br />
+          <span className="font-bold">{t('section6_location')}</span> {t('section6_closing_location_info')}
+        </p>
+      </div>
 
         {/* Lado Derecho - Título y Logos */}
-        <div className="w-full h-[90%] sm:w-[45%] relative  flex sm:flex-col items-center">
+        <div className="w-full h-[70%] sm:h-[90%] sm:w-[45%] relative  flex sm:flex-col items-center">
           {/* Título con Posición Absoluta */}
           <img
             src={svg4}
@@ -53,15 +72,15 @@ const Section6: React.FC = () => {
           <p className="absolute top-[60%] left-[35%] sm:top-[24%] sm:left-[30%] text-white text-[2rem] sm:text-[4rem] font-extrabold">del evento</p>
 
           {/* Logos acomodados en dos filas */}
-          <div className="absolute top-[0%] sm:top-[35%] sm:px-5 flex flex-start sm:flex-wrap justify-center gap-2 sm:gap-6 sm:mt-16">
-            <div className="flex justify-center sm:gap-10 sm:flex-nowrap">
-              <img src={logo1} alt="Logo 1" className="w-17 sm:w-26" />
-              <img src={logo2} alt="Logo 2" className="w-17 sm:w-26" />
-              <img src={logo3} alt="Logo 3" className="w-14 sm:w-26" />
+          <div className="absolute w-full top-[0%] sm:top-[35%] sm:px-5 flex flex-start sm:flex-wrap justify-center gap-2 sm:gap-6 sm:mt-16">
+            <div className="flex w-60 justify-around sm:justify-center sm:gap-15 sm:flex-nowrap">
+              <img src={logo1} alt="Logo 1" className="w-15 sm:w-35" />
+              <img src={logo2} alt="Logo 2" className="w-13 sm:w-26" />
+              <img src={getSvgLogoByLanguage()} alt="Logo 3" className="w-12 sm:w-26" />
             </div>
-            <div className="flex justify-center gap-1 sm:gap-16 mt-2 sm:mt-[-6%]">
-              <img src={logo4} alt="Logo 4" className="w-14 sm:w-26" />
-              <img src={logo5} alt="Logo 5" className="w-17 sm:w-26" />
+            <div className="flex w-40 justify-around sm:justify-center gap-1 sm:gap-20 mt-2 sm:mt-[-2%]">
+              <img src={logo4} alt="Logo 4" className="w-10 sm:w-15" />
+              <img src={logo5} alt="Logo 5" className="w-17 sm:w-35" />
             </div>
           </div>
         </div>
