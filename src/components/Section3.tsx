@@ -7,7 +7,7 @@ const Section3: React.FC = () => {
   return (
     <section className="relative w-full bg-white flex items-center justify-center">
       <div
-        className="w-full h-[15vh] sm:h-[40vh] relative bg-cover bg-center"
+        className="w-full h-[16vh] sm:h-[40vh] relative bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
