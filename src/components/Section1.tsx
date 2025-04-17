@@ -38,14 +38,14 @@ const Section1: React.FC = () => {
         <div className="w-1/2 flex flex-col p-[5%] relative space-y-2 sm:space-y-8 items-start h-full ">
           {/* SVG 1 y SVG 2 al lado izquierdo */}
           <div className="flex flex-row">
-            <img src={svg1} alt="Imagen pequeña 1" className="w-7 sm:w-15 h-auto" />
-            <img src={svg2} alt="SVG 2" className="w-15 ml-5 sm:w-55 h-auto" />
+            <img src={svg1} alt="Imagen pequeña 1" className="w-5 sm:w-15 h-auto" />
+            <img src={svg2} alt="SVG 2" className="w-15 ml-2 sm:ml-5 sm:w-55 h-auto" />
           </div>
           
           {/* estrellas*/}
           <div className="flex flex-col items-start space-y-6 sm:space-y-2 mt-8 sm:mt-110">
-          <img src={svg3} alt="SVG 3" className="absolute w-7 sm:w-20 h-auto left-[15%] top-[80%] sm:right-[25%] sm:top-[45%]" />
-          <img src={svg4} alt="SVG 4" className="absolute w-7 sm:w-20 h-auto left-[5%] top-[105%] sm:right-[25%] sm:top-[60%]" />
+          <img src={svg3} alt="SVG 3" className="absolute w-6 sm:w-20 h-auto left-[15%] top-[80%] sm:right-[25%] sm:top-[45%]" />
+          <img src={svg4} alt="SVG 4" className="absolute w-6 sm:w-20 h-auto left-[3%] top-[125%] sm:right-[25%] sm:top-[60%]" />
           </div>
         </div>
 
