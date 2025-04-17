@@ -117,7 +117,7 @@ const Section13: React.FC = () => {
         {/* Imagen inferior derecha */}
         <img src={pupi} alt="Imagen adicional 2" className="absolute bottom-0 left-38 sm:bottom-0 sm:left-50 sm:left-0 w-16 sm:w-24" />
       </div>
-      <div className="w-full absolute sm:hidden h-[0.5px] bg-[#69718e] bottom-29"></div>
+      <div className="w-full absolute sm:hidden h-[0.5px] bg-[#69718e] bottom-32"></div>
     </section>
   );
 };
