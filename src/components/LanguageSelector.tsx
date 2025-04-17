@@ -23,13 +23,13 @@ const LanguageSelector: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute top-4 right-2 sm:top-10 sm:right-15 z-50" ref={menuRef}>
+    <div className="absolute top-4 right-3 sm:top-10 sm:right-15 z-50" ref={menuRef}>
       <div className="relative">
         <button
           onClick={() => setOpen(!open)}
-          className="appearance-none bg-white/2 hover:bg-white/4 text-white px-1 py-0.5 sm:px-2 sm:py-1 rounded-full text-sm font-medium backdrop-blur-xs sm:backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="appearance-none bg-white/2 hover:bg-white/4 text-white px-1 py-0.5 sm:px-2 sm:py-1 rounded-full text-sm font-medium backdrop-blur-xs sm:backdrop-blur-sm  shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
         >
-          <img src={iconTranslation} alt="translate" className="w-5 h-5 sm:w-12 sm:h-12" />
+          <img src={iconTranslation} alt="translate" className="w-6 h-6 sm:w-12 sm:h-12" />
         </button>
 
         {open && (
