@@ -185,7 +185,7 @@ console.log("form",FormData,"formMessage",formMessage);
           />
       <form
   onSubmit={handleSubmit}
-  className="bg-white z-10 mt-[65%] p-4 sm:mr-5 sm:p-6 rounded-2xl sm:w-[46%] w-full text-black space-y-4 shadow-xl"
+  className="bg-white z-10 mt-[65%] sm:mt-[0%] p-4 sm:mr-5 sm:p-6 rounded-2xl sm:w-[45%] w-full text-black space-y-4 shadow-xl"
 >
   {/* Logo y mensaje */}
   {/* <div className="text-center"> */}
@@ -196,7 +196,7 @@ console.log("form",FormData,"formMessage",formMessage);
     /> */}
   {/* </div> */}
 
-  <p className="text-xs  mb-10 sm:mb-0 sm:w-[83%] text-[#0E1373] sm:text-[#333]text-center text-[0.8rem] sm:text-[0.9rem] font-semibold">{t('dinnerForm.description')}</p>
+  <p className="text-xs  mb-10 sm:mb-5 sm:w-[83%] text-[#0E1373] sm:text-[#333]text-center text-[0.8rem] sm:text-[0.9rem] font-semibold">{t('dinnerForm.description')}</p>
 
   {/* Grid de campos */}
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
