@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 const Section6: React.FC = () => {
   const { t } = useTranslation();
+  // const isMobile = window.innerWidth < 640;
 
   const getSvgLogoByLanguage = () => {
     switch (i18n.language) {
@@ -28,7 +29,7 @@ const Section6: React.FC = () => {
 
   return (
     <section
-      className="relative py-5 sm:py-0 w-full h-[60vh] sm:h-[70vh] flex items-center justify-center bg-cover bg-center"
+      className="relative py-5 sm:py-0 w-full h-[67vh] sm:h-[70vh] flex items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -40,27 +41,27 @@ const Section6: React.FC = () => {
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
         <div className="w-full h-[80%] flex flex-col justify-between items-center sm:w-[45%] bg-white p-5 sm:py-15 sm:px-5 rounded-lg shadow-lg">
         {/* Apertura */}
-        <p className="text-[#0E1373] mb-5 text-[1rem] w-[80%] sm:text-[1.3rem] font-bold text-center">
+        <p className="text-[#0E1373] mb-3 sm:mb-5 text-[1rem] sm:w-[80%] sm:text-[1.3rem] font-bold text-center">
           {t('section6_opening_title')}
         </p>
-        <p className="text-[#0E1373] text-[0.8rem] mb-5 w-[60%] sm:text-[1rem] text-left">
+        <p className="text-[#0E1373] text-[0.8rem] mb-5 w-[75%] sm:w-[60%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_opening_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_opening_location_info')}
         </p>
 
         {/* Cierre */}
-        <p className="text-[#0E1373] text-[1rem] mb-5 w-[80%] sm:text-[1.3rem] font-bold text-center mt-5">
+        <p className="text-[#0E1373] text-[1rem] mb-3 sm:mb-5 sm:w-[80%] sm:text-[1.3rem] font-bold text-center mt-5">
           {t('section6_closing_title')}
         </p>
-        <p className="text-[#0E1373] text-[0.8rem] w-[60%] sm:text-[1rem] text-left">
+        <p className="text-[#0E1373] text-[0.8rem] w-[75%] sm:w-[60%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_closing_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_closing_location_info')}
         </p>
         {/* Línea divisoria + texto */}
         <hr className="my-4 border-1 my-5 w-[90%] border-[#0E1373]" />
-        <p className="text-[#0E1373] w-[90%] text-[0.9rem] sm:text-[1rem] text-center font-semibold">
+        <p className="text-[#0E1373] w-[90%] text-[0.8rem] sm:text-[1rem] text-center font-semibold">
           {t('section6_description')}
         </p>
       </div>
@@ -77,7 +78,7 @@ const Section6: React.FC = () => {
           <p className="absolute top-[60%] left-[35%] sm:top-[24%] sm:left-[30%] text-white text-[2rem] sm:text-[4rem] font-extrabold">del evento</p>
 
           {/* Logos acomodados en dos filas */}
-          <div className="absolute w-full top-[0%] sm:top-[45%] items-end content-end h-[20%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
+          <div className="absolute w-full top-[15%] sm:top-[45%] items-end content-end h-[20%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
             <div className="flex w-60 sm:w-[60%] justify-around  sm:justify-center sm:gap-3 sm:flex-nowrap">
               <img src={logo1} alt="Logo 1" className="w-15 sm:w-30" />
               <img src={logo2} alt="Logo 2" className="w-13 sm:w-23" />

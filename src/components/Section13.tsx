@@ -28,16 +28,15 @@ const Section13: React.FC = () => {
 
   return (
     <section
-      className="relative w-full flex flex-col sm:flex-row py-2 sm:py-14 bg-[#111C46] bg-contain sm:bg-cover bg-bottom sm:bg-center bg-no-repeat text-white"
+      className="relative w-full flex flex-col sm:flex-row py-2 sm:py-5 bg-[#111C46] bg-contain sm:bg-cover bg-bottom sm:bg-center bg-no-repeat text-white"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Lado Izquierdo */}
-      <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 pb-30 pt-5 sm:py-10 sm:px-20 text-left font-poppins">
+      <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 pb-30 pt-5 sm:py-5 sm:px-20 text-left font-poppins">
         <h2 className="text-4xl sm:text-6xl font-bold">
           {t("section13_title")}
         </h2>
-        <div className="sm:mt-6 grid grid-cols-2 gap-4">
-          <div className="text-[0.6rem] sm:text-[1.1rem]">
+        <div className="text-[0.6rem] mt-3 sm:text-[1rem]">
             <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
             <a
               href="https://www.loca-agency.com/"
@@ -49,7 +48,21 @@ const Section13: React.FC = () => {
             </a>
 
             <p>Buenos Aires | Argentina</p>
-            <div className="mt-4 flex flex-col gap-2">
+        </div>
+        <div className="sm:mt-6 grid grid-cols-2 gap-5">
+          <div className="text-[0.6rem] sm:text-[1.1rem]">
+            {/* <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
+            <a
+              href="https://www.loca-agency.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-white"
+            >
+              <p className="text-white">www.loca-agency.com</p>
+            </a>
+
+            <p>Buenos Aires | Argentina</p> */}
+            <div className=" flex flex-col mt-3 sm:mt-0 gap-2">
               <div className="flex items-center">
                 <a
                   href="https://www.instagram.com/lo.casas"
@@ -137,7 +150,7 @@ const Section13: React.FC = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className=" flex flex-col mt-3 sm:mt-0">
             <p className="text-[0.8rem] sm:text-[1.1rem]">Lorena Cataldo</p>
             <p className="text-[0.6rem] sm:text-[0.9rem] opacity-90">
               lorenacataldo@loca-agency.com
@@ -166,7 +179,7 @@ const Section13: React.FC = () => {
         <img
           src={getSvgLogoByLanguage()}
           alt="Imagen adicional 1"
-          className="absolute bottom-0 sm:bottom-0 left-13 sm:left-0 w-16 sm:w-30"
+          className="absolute bottom-0 sm:bottom-0 left-13 sm:left-0 w-16 sm:w-32"
         />
         {/* Imagen inferior derecha */}
         <img

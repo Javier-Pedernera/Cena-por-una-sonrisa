@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Section10: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative h-full w-full flex flex-col sm:flex-row justify-between items-start pb-10 sm:pb-20 pt-16 bg-[#111C46] text-white">
+    <section className="relative -mt-1 h-full w-full flex flex-col sm:flex-row justify-between items-start pb-10 sm:pb-20 pt-16 bg-[#111C46] text-white">
       {/* Imágenes superpuestas en el centro */}
       <div className="absolute sm:h-1/2 z-10 sm:left-1/2 left-75 top-70 rotate-25 sm:rotate-0 top-65 sm:top-[52%] transform -translate-x-1/2 flex sm:flex-col space-y-2">
         <img src={star} alt="Imagen 1" className="w-8 ml-2 sm:ml-0 sm:w-16 sm:w-27 animate-fade" />

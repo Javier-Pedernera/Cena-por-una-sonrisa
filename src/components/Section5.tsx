@@ -24,7 +24,7 @@ const Section5: React.FC = () => {
             <p className="absolute top-[45%] left-[7%] text-white p-1 text-[1.5rem] sm:text-[6rem] font-poppins font-bold leading-tight text-left">
             {t('section5_title')}
             </p>
-            <p className="absolute top-[65%] left-[18%] text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
+            <p className="absolute top-[60%] sm:top-[65%] left-[18%] text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
             {t('section5_subtitle')}
             </p>
           </div> 
@@ -46,7 +46,7 @@ const Section5: React.FC = () => {
 
         {/* Parte derecha */}
         <div className="flex flex-col justify-end h-[95%]  w-[50%] sm:w-[50%]">
-          <p className="p-[5%] text-white opacity-70 text-[0.35rem] sm:pl-[7%] sm:pr-[15%] sm:text-[1.1rem] font-poppins font-medium leading-tight text-left">
+          <p className="p-[5%] text-[#fff] opacity-90 text-[0.45rem] sm:pl-[7%] sm:pr-[15%] sm:text-[1.1rem] font-poppins font-semibold leading-tight text-left">
           {t('section5_paragraph')}
           </p>
         </div> 
