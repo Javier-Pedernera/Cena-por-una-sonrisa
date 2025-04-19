@@ -6,7 +6,7 @@ import svgLogoEs from '../assets/images/logosyvectores-03.svg';
 import svgLogoEn from '../assets/images/logosyvectores-03_eng.svg'; 
 import svgLogoIt from '../assets/images/logosyvectores-03_ita.svg'; 
 import i18n from '../i18n';
-import logo4 from '../assets/images/logosyvectores-01.svg';
+import logo4 from '../assets/images/logosyvectores-01oro.svg';
 import logo5 from '../assets/images/logosyvectores-08.svg';
 import svg4 from '../assets/images/logosyvectores-05.svg';
 import { useTranslation } from 'react-i18next';
@@ -38,25 +38,30 @@ const Section6: React.FC = () => {
     >
       <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-10">
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
-        <div className="w-full h-[80%] flex flex-col justify-between sm:w-[45%] bg-white p-5 sm:py-20 rounded-lg shadow-lg">
+        <div className="w-full h-[80%] flex flex-col justify-between items-center sm:w-[45%] bg-white p-5 sm:py-15 sm:px-5 rounded-lg shadow-lg">
         {/* Apertura */}
-        <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center">
+        <p className="text-[#0E1373] mb-5 text-[1rem] w-[80%] sm:text-[1.3rem] font-bold text-center">
           {t('section6_opening_title')}
         </p>
-        <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
+        <p className="text-[#0E1373] text-[0.8rem] mb-5 w-[60%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_opening_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_opening_location_info')}
         </p>
 
         {/* Cierre */}
-        <p className="text-[#111c46] text-[1rem] sm:text-[1.3rem] font-bold text-center mt-5">
+        <p className="text-[#0E1373] text-[1rem] mb-5 w-[80%] sm:text-[1.3rem] font-bold text-center mt-5">
           {t('section6_closing_title')}
         </p>
-        <p className="text-[#111c46] text-[0.8rem] sm:text-[1.1rem] text-center">
+        <p className="text-[#0E1373] text-[0.8rem] w-[60%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_closing_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_closing_location_info')}
+        </p>
+        {/* Línea divisoria + texto */}
+        <hr className="my-4 border-1 my-5 w-[90%] border-[#0E1373]" />
+        <p className="text-[#0E1373] w-[90%] text-[0.9rem] sm:text-[1rem] text-center font-semibold">
+          {t('section6_description')}
         </p>
       </div>
 
@@ -72,11 +77,11 @@ const Section6: React.FC = () => {
           <p className="absolute top-[60%] left-[35%] sm:top-[24%] sm:left-[30%] text-white text-[2rem] sm:text-[4rem] font-extrabold">del evento</p>
 
           {/* Logos acomodados en dos filas */}
-          <div className="absolute w-full top-[0%] sm:top-[35%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
-            <div className="flex w-60 sm:w-[60%] justify-around sm:justify-center sm:gap-3 sm:flex-nowrap">
+          <div className="absolute w-full top-[0%] sm:top-[45%] items-end content-end h-[20%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
+            <div className="flex w-60 sm:w-[60%] justify-around  sm:justify-center sm:gap-3 sm:flex-nowrap">
               <img src={logo1} alt="Logo 1" className="w-15 sm:w-30" />
-              <img src={logo2} alt="Logo 2" className="w-13 sm:w-26" />
-              <img src={getSvgLogoByLanguage()} alt="Logo 3" className="w-12 sm:w-26" />
+              <img src={logo2} alt="Logo 2" className="w-13 sm:w-23" />
+              <img src={getSvgLogoByLanguage()} alt="Logo 3" className="w-12 sm:w-23" />
             </div>
             <div className="flex w-40 sm:w-[40%] justify-around sm:justify-center gap-1 sm:gap-5 mt-2 sm:mt-[-2%]">
               <img src={logo4} alt="Logo 4" className="w-10 sm:w-15" />
