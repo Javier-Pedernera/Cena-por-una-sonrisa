@@ -34,7 +34,7 @@ const Section2: React.FC = () => {
     }
   };
   return (
-    <section className="w-full py-5 sm:mt-10 sm:py-5 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
+    <section className="w-full pt-5 sm:mt-10 sm:py-5 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
       {/* Parte izquierda con el logo */}
       <div className="w-full sm:w-1/2  flex justify-center items-center">
         <img src={getSvgLogoByLanguage()}  alt="Logo" className="w-1/3 mb-5 sm:mb-0 sm:w-[40%]" />

@@ -62,7 +62,7 @@ const Section13: React.FC = () => {
             </a>
 
             <p>Buenos Aires | Argentina</p> */}
-            <div className=" flex flex-col mt-3 sm:mt-0 gap-2">
+            <div className=" flex flex-col mt-3 sm:mt-0 sm:gap-3 gap-2">
               <div className="flex items-center">
                 <a
                   href="https://www.instagram.com/lo.casas"

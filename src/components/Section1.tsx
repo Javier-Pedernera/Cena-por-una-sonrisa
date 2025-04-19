@@ -73,7 +73,7 @@ const Section1: React.FC = () => {
         {/* Parte derecha */}
         <div className="w-full  sm:w-1/2 flex p-[5%] flex-col space-y-2 relative items-end h-full">
         <img src={getSvgLogoByLanguage()} alt="Logo" className="hidden sm:block sm:w-[70%] sm:mr-10 h-auto" />
-          <img src={pupi} alt="Logo" className="w-12 sm:w-35 h-auto sm:mr-10 sm:pt-12 " />
+          <img src={pupi} alt="Logo" className="w-12 sm:w-35 h-auto -mt-5 mb-10 sm:mt-0 sm:mb-0 sm:mr-10 sm:pt-12 " />
           {/* estrellas*/}
           <div className="flex flex-row space-y-1 sm:space-y-0 mt-8 sm:mt-60 items-start">
             <img src={svg3} alt="SVG 3" className="absolute w-7 sm:w-20 h-auto right-[45%] top-[80%] sm:right-[45%] sm:top-[70%]" />
