@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import iconTranslation from '../assets/images/icon-translation.png';
 
 const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
@@ -10,6 +9,18 @@ const LanguageSelector: React.FC = () => {
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
     setOpen(false);
+  };
+
+  const getShortLang = (lang: string) => {
+    switch (lang) {
+      case 'en':
+        return 'EN';
+      case 'it':
+        return 'IT';
+      case 'es':
+      default:
+        return 'ES';
+    }
   };
 
   useEffect(() => {
@@ -27,13 +38,13 @@ const LanguageSelector: React.FC = () => {
       <div className="relative">
         <button
           onClick={() => setOpen(!open)}
-          className="appearance-none bg-white/2 hover:bg-white/4 text-white px-1 py-0.5 sm:px-2 sm:py-1 rounded-full text-sm font-medium backdrop-blur-xs sm:backdrop-blur-sm  shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+          className="w-5 h-5 sm:w-12 sm:h-12 bg-[#9d782b] text-[#1D263C]  text-[0.8rem] sm:text-[1.2rem] font-bold flex items-center justify-center shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
         >
-          <img src={iconTranslation} alt="translate" className="w-6 h-6 sm:w-12 sm:h-12" />
+          {getShortLang(i18n.language)}
         </button>
 
         {open && (
-          <div className="absolute text-[0.8rem] sm:text-[1rem] mt-1 right-0 sm:mt-2 w-8 sm:w-40 rounded-xl overflow-hidden shadow-2xl border border-white/5 backdrop-blur-xs bg-[#222538]/10 text-white animate-fadeIn">
+          <div className="absolute text-[0.8rem] sm:text-[1.2rem] mt-1 right-0 sm:mt-0 w-10 sm:w-40  overflow-hidden shadow-2xl border border-white/5 backdrop-blur-xs bg-[#222538]/10 text-white animate-fadeIn">
             {[
               { code: 'es', label: '🇪🇸 Español', short: 'ES' },
               { code: 'en', label: '🇺🇸 English', short: 'EN' },

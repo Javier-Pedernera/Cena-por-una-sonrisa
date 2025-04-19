@@ -36,7 +36,7 @@ const Section6: React.FC = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-20">
+      <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-10">
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
         <div className="w-full h-[80%] flex flex-col justify-between sm:w-[45%] bg-white p-5 sm:py-20 rounded-lg shadow-lg">
         {/* Apertura */}
@@ -72,13 +72,13 @@ const Section6: React.FC = () => {
           <p className="absolute top-[60%] left-[35%] sm:top-[24%] sm:left-[30%] text-white text-[2rem] sm:text-[4rem] font-extrabold">del evento</p>
 
           {/* Logos acomodados en dos filas */}
-          <div className="absolute w-full top-[0%] sm:top-[35%] sm:px-5 flex flex-start sm:flex-wrap justify-center gap-2 sm:gap-6 sm:mt-16">
-            <div className="flex w-60 justify-around sm:justify-center sm:gap-15 sm:flex-nowrap">
-              <img src={logo1} alt="Logo 1" className="w-15 sm:w-35" />
+          <div className="absolute w-full top-[0%] sm:top-[35%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
+            <div className="flex w-60 sm:w-[60%] justify-around sm:justify-center sm:gap-3 sm:flex-nowrap">
+              <img src={logo1} alt="Logo 1" className="w-15 sm:w-30" />
               <img src={logo2} alt="Logo 2" className="w-13 sm:w-26" />
               <img src={getSvgLogoByLanguage()} alt="Logo 3" className="w-12 sm:w-26" />
             </div>
-            <div className="flex w-40 justify-around sm:justify-center gap-1 sm:gap-20 mt-2 sm:mt-[-2%]">
+            <div className="flex w-40 sm:w-[40%] justify-around sm:justify-center gap-1 sm:gap-5 mt-2 sm:mt-[-2%]">
               <img src={logo4} alt="Logo 4" className="w-10 sm:w-15" />
               <img src={logo5} alt="Logo 5" className="w-17 sm:w-35" />
             </div>

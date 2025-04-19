@@ -29,7 +29,7 @@ const Section12: React.FC = () => {
       {/* Lado Izquierdo */}
       <div className="w-full sm:w-[55%] z-[1]  mt-[-10%] sm:mt-10 flex flex-col justify-center px-6 sm:px-20 py-10 sm:py-0 text-left font-poppins text-[#111C46]">
         <h2 className="text-[2rem] mt-[-85%] sm:mt-0 sm:text-[4.5rem] text-[#0E1373] font-extrabold leading-tight">{t('section12_title_1')}</h2>
-        <h2 className="text-[1.7rem]  sm:text-[3rem] text-[#0E1373] sm:ml-35 font-extrabold ml-10 mt-[-20px] sm:mt-[-6%]">{t('section12_title_2')}</h2>
+        <h2 className="text-[1.7rem]  sm:text-[3rem] text-[#0E1373] sm:ml-35 font-extrabold ml-10 mt-[-20px] sm:mt-[-5%]">{t('section12_title_2')}</h2>
         <p className="mt-[70%] sm:mt-8 w-[90%] text-[0.8rem] text-[#0E1373] sm:text-[1rem] font-bold leading-relaxed">
         {t('section12_p1')}
         </p>

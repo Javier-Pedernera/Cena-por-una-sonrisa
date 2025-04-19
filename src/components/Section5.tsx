@@ -24,7 +24,7 @@ const Section5: React.FC = () => {
             <p className="absolute top-[45%] left-[7%] text-white p-1 text-[1.5rem] sm:text-[6rem] font-poppins font-bold leading-tight text-left">
             {t('section5_title')}
             </p>
-            <p className="absolute top-[65%] left-[17%] text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
+            <p className="absolute top-[65%] left-[18%] text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
             {t('section5_subtitle')}
             </p>
           </div> 
