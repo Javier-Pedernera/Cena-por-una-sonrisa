@@ -42,6 +42,7 @@ const customSelectStyles = {
 
 const DinnerForm: React.FC = () => {
   const [captchaValid, setCaptchaValid] = useState(false);
+  const isMobile = window.innerWidth < 640;
   const { t } = useTranslation();
   const [countries, setCountries] = useState<CountryOption[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
@@ -139,7 +140,7 @@ console.log("form",FormData,"formMessage",formMessage);
       detalles,
       email,
     };
-        console.log("datos a enviar", payload);
+        // console.log("datos a enviar", payload);
         setIsLoading(true);   
     axios
       .post(`${API_URL}/cena_por_una_sonrisa`, payload)
@@ -158,23 +159,23 @@ console.log("form",FormData,"formMessage",formMessage);
 
   return (
     <div
-  className="min-h-screen w-full flex items-center justify-center sm:justify-end px-4 py-4 bg-[#151829] bg-no-repeat bg-cover"
+  className="min-h-screen w-full relative flex items-center justify-center sm:justify-end px-2 sm:px-4 py-4 sm:px-0 sm:bg-[#151829] bg-[#fff] bg-no-repeat bg-cover"
   style={{
     backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
+    backgroundSize: isMobile ? 'contain' : 'cover',
+    backgroundPosition: isMobile ? 'top' : 'center',
     backgroundRepeat: 'no-repeat',
   }}
 >
-      <div className="text-center absolute top-20 left-20 w-full">
+        {/* <div className="absolute top-1 left-30"> */}
+      <LanguageSelector />
+        {/* </div> */}
+      <div className="text-center absolute top-5 sm:top-20 pl-5 sm:pl-20 w-full">
           <img
             src={getSvgLogoByLanguage()}
             alt="Una Cena por una Sonrisa"
-            className="w-20 sm:w-50 h-auto self-center"
+            className="w-15 sm:w-50 h-auto self-center"
           />
-        </div>
-        <div className="absolute top-1 -right-5">
-      <LanguageSelector />
         </div>
         <MessageModal
             show={!!formMessage}
@@ -184,18 +185,18 @@ console.log("form",FormData,"formMessage",formMessage);
           />
       <form
   onSubmit={handleSubmit}
-  className="bg-white z-10 p-4 sm:p-6 rounded-2xl sm:w-[45%] w-full text-black space-y-4 shadow-xl"
+  className="bg-white z-10 mt-[65%] p-4 sm:mr-5 sm:p-6 rounded-2xl sm:w-[46%] w-full text-black space-y-4 shadow-xl"
 >
   {/* Logo y mensaje */}
-  <div className="text-center">
+  {/* <div className="text-center"> */}
     {/* <img
       src={getSvgLogoByLanguage()}
       alt="Una Cena por una Sonrisa"
       className="mx-auto w-16 sm:w-28 h-auto"
     /> */}
-  </div>
+  {/* </div> */}
 
-  <p className="text-xs italic w-[90%] text-[#333] text-center text-[0.9rem] font-semibold">{t('dinnerForm.description')}</p>
+  <p className="text-xs  mb-10 sm:mb-0 sm:w-[83%] text-[#0E1373] sm:text-[#333]text-center text-[0.8rem] sm:text-[0.9rem] font-semibold">{t('dinnerForm.description')}</p>
 
   {/* Grid de campos */}
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -261,14 +262,14 @@ console.log("form",FormData,"formMessage",formMessage);
       <label className={`block mb-1 text-sm font-medium text-left ${errors.includes('dinner') ? 'text-red-500' : ''}`}>{t('dinnerForm.dinner_label')}  <span className={errors.includes('dinner') ? 'text-red-500' : ''}>*</span></label>
       <div className="flex flex-wrap justify-center gap-5 text-sm">
         {options.map(o => (
-          <label key={o.value} className="flex items-center cursor-pointer relative pl-6 text-sm text-[#1D2538]">
+          <label key={o.value} className="flex items-center cursor-pointer relative pl-4 sm:pl-6 text-sm text-[#1D2538]">
           <input
             type="radio"
             name="dinner"
             value={o.value}
             className="peer absolute opacity-0 w-0 h-0"
           />
-          <span className="absolute left-0 top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-1 border-[#CDA434] peer-checked:bg-[#CDA434] peer-checked:border-[#CDA434] transition" />
+          <span className="absolute left-0 top-1/2 -translate-y-1/2 h-3 w-3 sm:h-4 sm:w-4 rounded-full border-1 border-[#CDA434] peer-checked:bg-[#CDA434] peer-checked:border-[#CDA434] transition" />
           {o.label}
         </label>
         ))}
