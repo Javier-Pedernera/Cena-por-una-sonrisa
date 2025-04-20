@@ -79,12 +79,12 @@ const Section6: React.FC = () => {
 
           {/* Logos acomodados en dos filas */}
           <div className="absolute w-full top-[15%] sm:top-[45%] items-end content-end h-[20%] sm:px-0 flex flex-start  justify-center gap-2 sm:gap-6 sm:mt-16">
-            <div className="flex w-60 sm:w-[60%] justify-around  sm:justify-center sm:gap-3 sm:flex-nowrap">
+            <div className="flex w-60 sm:w-[60%] justify-around  sm:justify-between sm:gap-3 sm:flex-nowrap">
               <img src={logo1} alt="Logo 1" className="w-15 sm:w-30" />
               <img src={logo2} alt="Logo 2" className="w-13 sm:w-23" />
               <img src={getSvgLogoByLanguage()} alt="Logo 3" className="w-12 sm:w-23" />
             </div>
-            <div className="flex w-40 sm:w-[40%] justify-around sm:justify-center gap-1 sm:gap-5 mt-2 sm:mt-[-2%]">
+            <div className="flex w-40 sm:w-[40%] justify-around sm:justify-between gap-1 sm:gap-5 mt-2 sm:mt-[-2%]">
               <img src={logo4} alt="Logo 4" className="w-10 sm:w-15" />
               <img src={logo5} alt="Logo 5" className="w-17 sm:w-35" />
             </div>

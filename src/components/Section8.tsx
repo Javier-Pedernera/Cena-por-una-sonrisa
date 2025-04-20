@@ -2,10 +2,32 @@ import React from 'react';
 import mainImage from '../assets/images/pngfondosimagenes-08.png';
 import { playersData } from '../data/playersData';
 import { useTranslation } from 'react-i18next';
-
+import { motion } from 'framer-motion';
 
 const Section8: React.FC = () => {
   const { t } = useTranslation();
+
+  // Definimos las variantes para las animaciones
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.8, y: 30 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeOut' },
+  },
+};
+
   return (
     <section className="w-full  flex flex-col items-center py-10 px-5">
       {/* Contenedor principal dividido en dos */}
@@ -24,16 +46,35 @@ const Section8: React.FC = () => {
       </div>
 
       {/* Grid de Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1200px]">
-      {playersData.map((player, index) => (
-        <div key={index} className="flex flex-col items-center text-center">
-          <img src={player.image} alt={player.name} className="w-15 h-15 sm:w-25 sm:h-25 object-cover rounded-full" />
-          <p className="text-[#0E1373] text-center mt-2 font-bold text-[0.9rem] sm:text-lg">{player.name}</p>
-          <p className="text-[#0E1373] text-center text-[0.8rem]">{player.country}</p>
-          {player.teams && <p className="text-[#0E1373] text-center text-[0.7rem]">({player.teams})</p>}
-        </div>
-      ))}
-      </div>
+      <motion.div
+  className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1200px]"
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+>
+  {playersData.map((player, index) => (
+    <motion.div
+      key={index}
+      className="flex flex-col items-center text-center cursor-pointer"
+      variants={cardVariants}
+      whileHover={{ scale: 1.05 }}
+    >
+      <img
+        src={player.image}
+        alt={player.name}
+        className="w-15 h-15 sm:w-25 sm:h-25 object-cover rounded-full shadow-lg"
+      />
+      <p className="text-[#0E1373] text-center mt-2 font-bold text-[0.9rem] sm:text-lg">
+        {player.name}
+      </p>
+      <p className="text-[#0E1373] text-center text-[0.8rem]">{player.country}</p>
+      {player.teams && (
+        <p className="text-[#0E1373] text-center text-[0.7rem]">({player.teams})</p>
+      )}
+    </motion.div>
+  ))}
+</motion.div>
     </section>
   );
 };

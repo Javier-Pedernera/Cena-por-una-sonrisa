@@ -6,7 +6,7 @@ import backgroundImage from '../assets/images/pngfondosimagenes-38_up.png';
 const Section9: React.FC = () => {
   return (
     <section
-      className="relative w-full min-h-[30vh] h-full sm:min-h-[70vh] bg-cover bg-top bg-no-repeat flex items-center justify-center"
+      className="relative w-full min-h-[30vh] h-full sm:min-h-[75vh] bg-cover bg-top bg-no-repeat flex items-center justify-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}

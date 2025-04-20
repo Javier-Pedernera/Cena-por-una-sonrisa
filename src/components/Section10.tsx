@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Section10: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="relative -mt-1 h-full w-full flex flex-col sm:flex-row justify-between items-start pb-10 sm:pb-20 pt-16 bg-[#111C46] text-white">
+    <section className="relative -mt-1 h-full w-full flex flex-col sm:flex-row justify-between items-start pb-10 sm:pb-20 pt-16 bg-[#111C46] text-white ">
       {/* Imágenes superpuestas en el centro */}
       <div className="absolute sm:h-1/2 z-10 sm:left-1/2 left-75 top-70 rotate-25 sm:rotate-0 top-65 sm:top-[52%] transform -translate-x-1/2 flex sm:flex-col space-y-2">
         <img src={star} alt="Imagen 1" className="w-8 ml-2 sm:ml-0 sm:w-16 sm:w-27 animate-fade" />
@@ -17,14 +17,14 @@ const Section10: React.FC = () => {
       <div className="w-full sm:w-1/2 sm:px-20 text-left font-poppins flex flex-col justify-start h-full">
         <div className="w-[90%] ml-[5%] mb-5 sm-ml-0 justify-center sm:w-full sm:h-1/2 flex flex-col sm:justify-start">
           <h2 className="text-[3rem] ml-1 sm:ml-0 sm:text-[5rem] font-bold leading-tight">{t('section10_title1')}</h2>
-          <h2 className="text-[2rem] ml-25 sm:ml-40 mt-[-1rem] sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">{t('section10_title2')}</h2>
+          <h2 className="text-[2rem] ml-25 sm:ml-40 mt-[-1rem] sm:mt-[-1.5rem] sm:text-[3.4rem] font-bold leading-tight">{t('section10_title2')}</h2>
           <p className="mt-2 sm:mt-4 sm:mt-10  text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
           {t('section10_text1')}
           </p>
         </div>
         <div className="w-[90%] ml-[5%] sm:w-full mt-4 sm:mt-14 sm:h-1/2 flex flex-col justify-start">
           <h2 className="text-[3rem] ml-0 sm:text-3xl sm:text-[5rem] font-bold leading-tight">{t('section10_title3')}</h2>
-          <h2 className="text-[2rem] ml-17 mt-[-1rem] sm:text-3xl sm:ml-28 sm:mt-[-1.5rem] sm:text-[3.5rem] font-bold leading-tight">{t('section10_title4')}</h2>
+          <h2 className="text-[2rem] ml-17 mt-[-1rem] sm:text-3xl sm:ml-28 sm:mt-[-1.5rem] sm:text-[3.4rem] font-bold leading-tight">{t('section10_title4')}</h2>
           <p className="mt-2 sm:mt-4 sm:mt-10 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
           {t('section10_text2')}
           </p>
