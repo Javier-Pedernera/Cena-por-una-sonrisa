@@ -3,6 +3,9 @@ import backgroundImage from '../assets/images/pngfondosimagenes-01bis.png';
 import svgLogoEs from '../assets/images/logosyvectores-03.svg';
 import svgLogoEn from '../assets/images/logosyvectores-03_eng.svg';
 import svgLogoIt from '../assets/images/logosyvectores-03_ita.svg';
+import LogoEnt from '../assets/images/logosyvectores-01oro.svg';
+import LocaLogo from '../assets/images/logosyvectores-02B.svg';
+import LogoPupi from '../assets/images/logosyvectores-04.svg';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n';
@@ -74,7 +77,7 @@ const DinnerForm: React.FC = () => {
     { value: 'Miami', label: t('dinnerForm.options.miami') },
     { value: 'NYC', label: t('dinnerForm.options.nyc') },
     { value: 'Ambas', label: t('dinnerForm.options.both') },
-    { value: 'Otras', label: t('dinnerForm.options.others') },
+    // { value: 'Otras', label: t('dinnerForm.options.others') },
   ];
 
   const getSvgLogoByLanguage = () => {
@@ -174,8 +177,29 @@ console.log("form",FormData,"formMessage",formMessage);
           <img
             src={getSvgLogoByLanguage()}
             alt="Una Cena por una Sonrisa"
-            className="w-15 sm:w-50 h-auto self-center"
+            className="w-15 sm:w-40 h-auto self-center"
           />
+        </div>
+
+        <div className="text-center absolute top-5  sm:top-63 pl-[70%] sm:pl-20 w-full">
+          <img
+            src={LogoPupi}
+            alt="Una Cena por una Sonrisa"
+            className="w-9  sm:w-15 h-auto self-center"
+          />
+        </div>
+        <div className="text-center flex flex-col sm:flex-row absolute top-17 sm:top-80 pl-5 pl-[70%] sm:pl-20 w-full">
+          <img
+            src={LocaLogo}
+            alt="Una Cena por una Sonrisa"
+            className="w-15 sm:w-37 h-auto flex-end  items-end content-end"
+          />
+          <img
+            src={LogoEnt}
+            alt="Una Cena por una Sonrisa"
+            className="w-7 sm:w-10 h-auto mt-3 sm:mt-0 sm:ml-3  items-end content-end"
+          />
+      
         </div>
         <MessageModal
             show={!!formMessage}
@@ -207,7 +231,7 @@ console.log("form",FormData,"formMessage",formMessage);
         name="name"
         type="text"
         className="w-full p-2 rounded border border-gray-300 focus:border-[#CDA434] focus:outline-none text-sm"
-        placeholder={t('dinnerForm.placeholder_nombre')}
+        // placeholder={t('dinnerForm.placeholder_nombre')}
       />
     </div>
 
@@ -218,7 +242,7 @@ console.log("form",FormData,"formMessage",formMessage);
         name="lastName"
         type="text"
         className="w-full p-2 rounded border border-gray-300 focus:border-[#CDA434] focus:outline-none text-sm"
-        placeholder={t('dinnerForm.placeholder_apellido')}
+        // placeholder={t('dinnerForm.placeholder_apellido')}
       />
     </div>
 
@@ -253,7 +277,7 @@ console.log("form",FormData,"formMessage",formMessage);
         name="address"
         type="text"
         className="w-full p-2 rounded border border-gray-300 focus:border-[#CDA434] focus:outline-none text-sm"
-        placeholder={t('dinnerForm.placeholder_direccion')}
+        // placeholder={t('dinnerForm.placeholder_direccion')}
       />
     </div>
 
@@ -316,7 +340,7 @@ console.log("form",FormData,"formMessage",formMessage);
       <textarea
         name="details"
         className="w-full p-2 rounded border border-gray-300 focus:border-[#CDA434] focus:outline-none text-sm"
-        placeholder={t('dinnerForm.placeholder_detalles')}
+        // placeholder={t('dinnerForm.placeholder_detalles')}
       />
     </div>
   </div>
