@@ -22,12 +22,12 @@ const Section5: React.FC = () => {
         }}
       >
         {/* Parte izquierda */}
-        <div className=" flex flex-col justify-end sm:justify-center left-10 h-[45%] sm:h-auto sm:left-[5%] w-[100%] sm:w-[50%]">
+        <div className=" flex flex-col justify-end sm:justify-center left-10 h-[45%] sm:h-auto sm:left-[5%] w-[100%] sm:w-[45%]">
           <div className="sm:relative flex flex-col leading-tight  justify-end sm:justify-center h-[90%] sm:h-auto  top-10 left-10 sm:top-[10%] sm:left-[5%]">
             <p className="sm:absolute mt-0 ml-[7%] sm:ml-0 text-white p-1 text-[1.5rem] sm:text-[6rem] font-poppins font-bold leading-tight text-left">
             {t('section5_title')}
             </p>
-            <p className="sm:absolute -mt-[10px] sm:top-15 ml-[18%] sm:ml-40 text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
+            <p className="sm:absolute -mt-[10px] sm:top-10   ml-[18%] sm:ml-40 text-white p-1 text-[1.1rem] sm:text-[3.5rem] font-poppins font-bold leading-tight text-left">
             {t('section5_subtitle')}
             </p>
           </div> 
@@ -48,8 +48,8 @@ const Section5: React.FC = () => {
         </div>
 
         {/* Parte derecha */}
-        <div className="flex flex-col justify-end h-[55%] sm:h-[95%] sm:mt-0 w-[100%] sm:w-[50%]">
-          <p className=" p-[5%] pb-7 text-[#fff] opacity-90 text-[0.8rem] sm:pl-[7%] sm:pr-[15%] sm:text-[1.1rem] font-poppins font-semibold leading-tight text-left">
+        <div className="flex flex-col justify-end h-[55%] sm:h-[95%] sm:mt-0 w-[100%] sm:w-[45%]">
+          <p className=" p-[5%] pb-7 text-[#fff]  text-[0.8rem] sm:pl-[10%] sm:pr-[5%] sm:text-[1.1rem] font-poppins font-semibold leading-tight text-left">
           {t('section5_paragraph')}
           </p>
         </div> 

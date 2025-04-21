@@ -37,24 +37,24 @@ const Section6: React.FC = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-10">
+      <div className="w-full h-[100%] flex flex-col-reverse sm:flex-col  sm:flex-row items-center justify-between px-5 sm:px-[5%]">
         {/* Lado Izquierdo - Texto en Rectángulo Blanco */}
-        <div className="w-full h-[80%] flex flex-col justify-between items-center sm:w-[45%] bg-white p-5 sm:py-15 sm:px-5 rounded-lg shadow-lg">
+        <div className="w-full h-[75%] flex flex-col justify-between items-center sm:w-[45%] bg-white p-5 ml-0  sm:py-10 sm:px-5  rounded-lg shadow-lg">
         {/* Apertura */}
-        <p className="text-[#0E1373] mb-3 sm:mb-5 text-[1rem] sm:w-[80%] sm:text-[1.3rem] font-bold text-center">
+        <p className="text-[#0E1373] mb-3 sm:mb-3 text-[1rem] sm:w-[85%] sm:text-[1.3rem] font-bold text-center">
           {t('section6_opening_title')}
         </p>
-        <p className="text-[#0E1373] text-[0.8rem] mb-5 w-[75%] sm:w-[60%] sm:text-[1rem] text-left">
+        <p className="text-[#0E1373] text-[0.8rem] mb-5 w-[75%] sm:w-[63%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_opening_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_opening_location_info')}
         </p>
 
         {/* Cierre */}
-        <p className="text-[#0E1373] text-[1rem] mb-3 sm:mb-5 sm:w-[80%] sm:text-[1.3rem] font-bold text-center mt-5">
+        <p className="text-[#0E1373] text-[1rem] mb-3 sm:mb-3 sm:w-[85%] sm:text-[1.3rem] font-bold text-center mt-5">
           {t('section6_closing_title')}
         </p>
-        <p className="text-[#0E1373] text-[0.8rem] w-[75%] sm:w-[60%] sm:text-[1rem] text-left">
+        <p className="text-[#0E1373] text-[0.8rem] w-[75%] sm:w-[63%] sm:text-[1rem] text-left">
           <span className="font-bold">{t('section6_date')}</span> {t('section6_closing_date_info')}
           <br />
           <span className="font-bold">{t('section6_location')}</span> {t('section6_closing_location_info')}

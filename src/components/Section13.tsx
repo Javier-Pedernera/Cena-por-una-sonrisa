@@ -6,7 +6,7 @@ import svgLogoIt from "../assets/images/logosyvectores-03_ita.svg";
 import i18n from "../i18n";
 import pupi from "../assets/images/logosyvectores-04.svg";
 import instagramIcon from "../assets/images/logosyvectores-10.svg";
-import LinkedInIcon from "../assets/images/logosyvectores-13.svg";
+import LinkedInIcon from "../assets/images/linkedin-logo-boton.svg";
 import facebookIcon from "../assets/images/logosyvectores-11.svg";
 import whatsappIcon from "../assets/images/logosyvectores-12.svg";
 import { useTranslation } from "react-i18next";
@@ -38,6 +38,8 @@ const Section13: React.FC = () => {
         </h2>
         <div className="text-[0.6rem] mt-3 sm:text-[1rem]">
             <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
+            <p className="text-white">Hello@unamanoporunasonrisa.com</p>
+            <br />
             <a
               href="https://www.loca-agency.com/"
               target="_blank"
