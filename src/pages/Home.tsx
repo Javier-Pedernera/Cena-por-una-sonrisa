@@ -37,7 +37,7 @@ const { i18n } = useTranslation();
       {/* Barra fija */}
       <div className="fixed top-0 left-0 w-full h-[45px] sm:h-[70px] bg-[#262a3e] border-b border-[#d1933f] flex items-center justify-center z-[100]">
   <a href="https://live.tickethoy.com/" target="_blank" rel="noopener noreferrer">
-    <img src={getSvgTicketeraByLanguage()} alt="Logo" className="h-4 sm:h-8 mx-auto" />
+    <img src={getSvgTicketeraByLanguage()} alt="Logo" className="h-7 sm:h-8 mx-auto" />
   </a>
 </div>
       {/* Secciones*/}
