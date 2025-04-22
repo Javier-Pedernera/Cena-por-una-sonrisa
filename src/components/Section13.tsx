@@ -10,6 +10,16 @@ import LinkedInIcon from "../assets/images/linkedin-logo-boton.svg";
 import facebookIcon from "../assets/images/logosyvectores-11.svg";
 import whatsappIcon from "../assets/images/logosyvectores-12.svg";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay }
+  }),
+};
 
 const Section13: React.FC = () => {
   const { t } = useTranslation();
@@ -20,12 +30,18 @@ const Section13: React.FC = () => {
         return svgLogoEn;
       case "it":
         return svgLogoIt;
-      case "es":
       default:
         return svgLogoEs;
     }
   };
-
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: (delay: number = 0) => ({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, delay }
+    })
+  };
   return (
     <section
       className="relative w-full flex flex-col sm:flex-row py-2 sm:py-5 bg-[#111C46] bg-contain sm:bg-cover bg-bottom sm:bg-center bg-no-repeat text-white"
@@ -33,39 +49,56 @@ const Section13: React.FC = () => {
     >
       {/* Lado Izquierdo */}
       <div className="w-full sm:w-1/2 flex flex-col justify-center px-8 pb-30 pt-5 sm:py-5 sm:px-20 text-left font-poppins">
-        <h2 className="text-4xl sm:text-6xl font-bold">
+      <motion.h2
+          className="text-4xl sm:text-6xl font-bold"
+          variants={slideInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={0}
+        >
           {t("section13_title")}
-        </h2>
-        <div className="text-[0.6rem] mt-3 sm:text-[1rem]">
-            <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
-            <p className="text-white">Hello@unamanoporunasonrisa.com</p>
-            <br />
-            <a
-              href="https://www.loca-agency.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-white"
-            >
-              <p className="text-white">www.loca-agency.com</p>
-            </a>
+        </motion.h2>
 
-            <p>Buenos Aires | Argentina</p>
-        </div>
+        {/* Texto descriptivo con slide-in retrasado */}
+        <motion.div
+          className="text-[0.6rem] mt-3 sm:text-[1rem]"
+          variants={slideInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={0.3}
+        >
+          <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
+          <p className="text-white">Hello@unamanoporunasonrisa.com</p>
+          <br />
+          <a
+            href="https://www.loca-agency.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white"
+          >
+            <p className="text-white">www.loca-agency.com</p>
+          </a>
+          <a
+            href="https://www.534ent.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-white"
+          >
+            <p className="text-white">www.534ent.com</p>
+          </a>
+          <p>Buenos Aires | Argentina</p>
+        </motion.div>
+
         <div className="sm:mt-6 grid grid-cols-2 gap-5">
           <div className="text-[0.6rem] sm:text-[1.1rem]">
-            {/* <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
-            <a
-              href="https://www.loca-agency.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-white"
-            >
-              <p className="text-white">www.loca-agency.com</p>
-            </a>
-
-            <p>Buenos Aires | Argentina</p> */}
-            <div className=" flex flex-col mt-3 sm:mt-0 sm:gap-3 gap-2">
-              <div className="flex items-center">
+            <div className="flex flex-col mt-3 sm:mt-0 sm:gap-3 gap-2">
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://www.instagram.com/lo.casas"
                   target="_blank"
@@ -79,9 +112,13 @@ const Section13: React.FC = () => {
                   />
                   <span className="text-white">@lo.casas</span>
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center">
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://www.facebook.com/LoCaimagenyeventos"
                   target="_blank"
@@ -95,9 +132,13 @@ const Section13: React.FC = () => {
                   />
                   <span className="text-white">/LoCaimagenyeventos</span>
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center">
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://wa.me/13056773928"
                   target="_blank"
@@ -111,9 +152,13 @@ const Section13: React.FC = () => {
                   />
                   <span className="text-white">+1 305 677 3928 🇺🇸</span>
                 </a>
-              </div>
+              </motion.div>
 
-              <div className="flex items-center">
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://wa.me/5491150325546"
                   target="_blank"
@@ -127,32 +172,51 @@ const Section13: React.FC = () => {
                   />
                   <span className="text-white">+54 9 11 5032 5546 🇦🇷</span>
                 </a>
-              </div>
-              <div className="flex items-center">
+              </motion.div>
+
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://www.instagram.com/534ent"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white"
                 >
-                  <img src={instagramIcon} alt="Instagram" className="w-6 h-6 mr-2" />
+                  <img
+                    src={instagramIcon}
+                    alt="Instagram"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span className="text-white">@534ent</span>
                 </a>
-              </div>
-              <div className="flex items-center">
+              </motion.div>
+
+              <motion.div
+                className="flex items-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <a
                   href="https://www.linkedin.com/company/534ent/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-white"
                 >
-                  <img src={LinkedInIcon} alt="Instagram" className="w-6 h-6 mr-2" />
+                  <img
+                    src={LinkedInIcon}
+                    alt="LinkedIn"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span className="text-white">534 Entertainment</span>
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className=" flex flex-col mt-3 sm:mt-0">
+
+          <div className="flex flex-col mt-3 sm:mt-0">
             <p className="text-[0.8rem] sm:text-[1.1rem]">Lorena Cataldo</p>
             <p className="text-[0.6rem] sm:text-[0.9rem] opacity-90">
               lorenacataldo@loca-agency.com
@@ -178,16 +242,26 @@ const Section13: React.FC = () => {
       {/* Lado Derecho */}
       <div className="w-full mb-5 sm:mb-10 sm:w-1/2 relative flex justify-center items-center">
         {/* Imagen superior izquierda */}
-        <img
+        <motion.img
           src={getSvgLogoByLanguage()}
           alt="Imagen adicional 1"
           className="absolute bottom-0 sm:bottom-0 left-13 sm:left-0 w-16 sm:w-32"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={0}
         />
         {/* Imagen inferior derecha */}
-        <img
+        <motion.img
           src={pupi}
           alt="Imagen adicional 2"
           className="absolute bottom-0 left-38 sm:bottom-0 sm:left-40 sm:left-0 w-16 sm:w-30"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={0.2}
         />
       </div>
       <div className="w-full absolute sm:hidden h-[0.5px] bg-[#69718e] bottom-32"></div>

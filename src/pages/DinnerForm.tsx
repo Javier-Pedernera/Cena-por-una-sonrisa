@@ -319,7 +319,7 @@ console.log("form",FormData,"formMessage",formMessage);
         type="number"
         min="0"
         className="w-full p-2 rounded border border-gray-300 focus:border-[#CDA434] focus:outline-none text-sm"
-        placeholder="3"
+        // placeholder="3"
       />
     </div>
 

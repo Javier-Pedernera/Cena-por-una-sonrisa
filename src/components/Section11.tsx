@@ -1,26 +1,26 @@
 import React from 'react';
 import backgroundImage from '../assets/images/pngfondosimagenes-38_foot-recortada.png';
 import { useTranslation } from 'react-i18next';
-import svgTicketeraEs from '../assets/images/ticketera-esp.svg'; 
-import svgTicketeraEn from '../assets/images/ticketera-eng.svg'; 
-import svgTicketeraIt from '../assets/images/ticketera-ita.svg';
-import i18n from '../i18n';
+// import svgTicketeraEs from '../assets/images/ticketera-esp.svg'; 
+// import svgTicketeraEn from '../assets/images/ticketera-eng.svg'; 
+// import svgTicketeraIt from '../assets/images/ticketera-ita.svg';
+// import i18n from '../i18n';
 
 const Section11: React.FC = () => {
   const { t } = useTranslation();
   const isMobile = window.innerWidth < 640;
 
-  const getSvgTicketeraByLanguage = () => {
-    switch (i18n.language) {
-      case 'en':
-        return svgTicketeraEn;
-      case 'it':
-        return svgTicketeraIt;
-      case 'es':
-      default:
-        return svgTicketeraEs;
-    }
-  };
+  // const getSvgTicketeraByLanguage = () => {
+  //   switch (i18n.language) {
+  //     case 'en':
+  //       return svgTicketeraEn;
+  //     case 'it':
+  //       return svgTicketeraIt;
+  //     case 'es':
+  //     default:
+  //       return svgTicketeraEs;
+  //   }
+  // };
 
   return (
     <section
@@ -44,11 +44,11 @@ const Section11: React.FC = () => {
   }}
 >
       {/* Imagen centrada en mobile */}
-      <div className="block sm:hidden absolute top-2 left-[70%]">
+      {/* <div className="block sm:hidden absolute top-2 left-[70%]">
         <a href="https://live.tickethoy.com/" target="_blank" rel="noopener noreferrer">
           <img src={getSvgTicketeraByLanguage()} alt="Imagen destacada" className="w-22 mx-auto cursor-pointer" />
         </a>
-      </div>
+      </div> */}
 
       {/* Contenido izquierdo */}
       <div className="w-full sm:w-1/2 sm:pl-20 px-4 sm:px-20 text-left font-bold font-poppins flex flex-col justify-center">
@@ -58,7 +58,7 @@ const Section11: React.FC = () => {
       </div>
 
       {/* Imagen posicionada en desktop */}
-      <div className="hidden sm:block absolute top-10 left-[55%] sm:left-[70%]">
+      {/* <div className="hidden sm:block absolute top-10 left-[55%] sm:left-[70%]">
       <a
             href="https://live.tickethoy.com/"
             target="_blank"
@@ -67,7 +67,7 @@ const Section11: React.FC = () => {
           >
             <img src={getSvgTicketeraByLanguage()} alt="Ticketera" className="sm:w-60 h-auto" />
           </a>
-      </div>
+      </div> */}
     </section>
   );
 };

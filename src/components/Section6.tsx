@@ -89,7 +89,7 @@ const Section6: React.FC = () => {
           {/* Logos acomodados en dos filas */}
           <div className="absolute w-full top-[15%] sm:top-[45%] h-auto flex flex-col sm:flex-row justify-center items-center sm:gap-8 gap-2 sm:px-0 sm:mt-16">
             {/* Contenedor único para ambos layouts */}
-            <div className="flex flex-wrap sm:flex-nowrap justify-center items-center gap-3 sm:gap-6 w-[90%] sm:w-[70%]">
+            <div className="flex flex-wrap sm:flex-nowrap justify-between sm:justify-center items-center gap-2 sm:gap-6 w-[90%] sm:w-[70%]">
               <motion.img
                 src={logo1}
                 alt="Logo 1"

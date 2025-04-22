@@ -7,29 +7,29 @@ import svg4 from '../assets/images/logosyvectores-06.svg';
 import svgLogoEs from '../assets/images/logosyvectores-03.svg'; 
 import svgLogoEn from '../assets/images/logosyvectores-03_eng.svg'; 
 import svgLogoIt from '../assets/images/logosyvectores-03_ita.svg'; 
-import svgTicketeraEs from '../assets/images/ticketera-esp.svg'; 
-import svgTicketeraEn from '../assets/images/ticketera-eng.svg'; 
-import svgTicketeraIt from '../assets/images/ticketera-ita.svg';
+// import svgTicketeraEs from '../assets/images/ticketera-esp.svg'; 
+// import svgTicketeraEn from '../assets/images/ticketera-eng.svg'; 
+// import svgTicketeraIt from '../assets/images/ticketera-ita.svg';
 import pupi from '../assets/images/logosyvectores-04.svg';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const Section1: React.FC = () => {
   const { i18n } = useTranslation();
 
 
-  const getSvgTicketeraByLanguage = () => {
-    switch (i18n.language) {
-      case 'en':
-        return svgTicketeraEn;
-      case 'it':
-        return svgTicketeraIt;
-      case 'es':
-      default:
-        return svgTicketeraEs;
-    }
-  };
+  // const getSvgTicketeraByLanguage = () => {
+  //   switch (i18n.language) {
+  //     case 'en':
+  //       return svgTicketeraEn;
+  //     case 'it':
+  //       return svgTicketeraIt;
+  //     case 'es':
+  //     default:
+  //       return svgTicketeraEs;
+  //   }
+  // };
 
   const getSvgLogoByLanguage = () => {
     switch (i18n.language) {
@@ -63,7 +63,7 @@ const Section1: React.FC = () => {
             <img src={svg4} alt="SVG 4" className="absolute w-6 sm:w-20 h-auto left-[5%] top-[95%] sm:right-[25%] sm:top-[55%]" />
             
             {/* Botón de entrada */}
-            <motion.a
+            {/* <motion.a
               href="https://live.tickethoy.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -79,7 +79,7 @@ const Section1: React.FC = () => {
               alt="Ticketera"
               className="w-full h-auto transition-all duration-300 ease-in-out hover:scale-101 hover:drop-shadow-[0_0_4px_rgba(255,215,0,0.6)]"
             />
-            </motion.a>
+            </motion.a> */}
           </div>
         </div>
 
@@ -90,7 +90,7 @@ const Section1: React.FC = () => {
           
           {/* Estrellas */}
           <div className="flex flex-row space-y-1 sm:space-y-0 mt-8 sm:mt-60 items-start">
-            <img src={svg3} alt="SVG 3" className="absolute w-7 sm:w-20 h-auto right-[45%] top-[80%] sm:right-[45%] sm:top-[70%]" />
+            <img src={svg3} alt="SVG 3" className="absolute w-7 sm:w-20 h-auto right-[45%] top-[70%] sm:right-[45%] sm:top-[70%]" />
             <img src={svg4} alt="SVG 4" className="absolute w-7 sm:w-20 h-auto right-[5%] top-[90%] sm:right-[15%] sm:top-[80%]" />
           </div>
         </div>

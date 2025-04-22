@@ -18,14 +18,14 @@ const Section10: React.FC = () => {
         <div className="w-[90%] ml-[5%] mb-5 sm-ml-0 justify-center sm:w-full sm:h-1/2 flex flex-col sm:justify-start">
           <h2 className="text-[3rem] ml-1 sm:ml-0 sm:text-[5rem] font-bold leading-tight">{t('section10_title1')}</h2>
           <h2 className="text-[2rem] ml-25 sm:ml-40 mt-[-1rem] sm:mt-[-1.5rem] sm:text-[3.4rem] font-bold leading-tight">{t('section10_title2')}</h2>
-          <p className="mt-2 sm:mt-4 sm:mt-10  text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+          <p className="mt-2 sm:mt-4 sm:mt-10  text-[0.8rem] sm:text-[1rem] leading-relaxed">
           {t('section10_text1')}
           </p>
         </div>
         <div className="w-[90%] ml-[5%] sm:w-full mt-4 sm:mt-14 sm:h-1/2 flex flex-col justify-start">
           <h2 className="text-[3rem] ml-0 sm:text-3xl sm:text-[5rem] font-bold leading-tight">{t('section10_title3')}</h2>
           <h2 className="text-[2rem] ml-17 mt-[-1rem] sm:text-3xl sm:ml-28 sm:mt-[-1.5rem] sm:text-[3.4rem] font-bold leading-tight">{t('section10_title4')}</h2>
-          <p className="mt-2 sm:mt-4 sm:mt-10 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+          <p className="mt-2 sm:mt-4 sm:mt-10 text-[0.8rem] sm:text-[1rem] leading-relaxed">
           {t('section10_text2')}
           </p>
         </div>
@@ -33,25 +33,25 @@ const Section10: React.FC = () => {
 
       {/* Contenido lado derecho */}
       <div className="w-[90%] ml-[5%] sm:w-1/2 sm:px-20 text-left font-poppins mt-10 sm:mt-0">
-        <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="text-[0.8rem] sm:text-[1rem] leading-relaxed">
         {t('section10_text3')}
         </p>
-        <p className="mt-4 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="mt-4 text-[0.8rem] sm:text-[1rem] leading-relaxed">
         {t('section10_text4')}
         </p>
-        <p className="mt-4 text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="mt-4 text-[0.8rem] sm:text-[1rem] leading-relaxed">
         {t('section10_text5')}
         </p>
         <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_general')}</h3>
-        <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="text-[0.8rem] sm:text-[1rem] leading-relaxed">
           {t('section10_general_text')}
         </p>
         <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_vip')}</h3>
-        <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="text-[0.8rem] sm:text-[1rem] leading-relaxed">
         {t('section10_vip_text')}
         </p>
         <h3 className="mt-4 sm:mt-8 text-[1.1rem] sm:text-xl font-bold">{t('section10_corp')}</h3>
-        <p className="text-[0.8rem] sm:text-[0.9rem] leading-relaxed">
+        <p className="text-[0.8rem] sm:text-[1rem] leading-relaxed">
         {t('section10_corp_text')}
         </p>
       </div>
