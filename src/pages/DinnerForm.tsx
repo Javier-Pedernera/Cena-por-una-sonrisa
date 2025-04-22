@@ -169,10 +169,10 @@ console.log("form",FormData,"formMessage",formMessage);
     backgroundPosition: isMobile ? 'top' : 'center',
     backgroundRepeat: 'no-repeat',
   }}
->
-        {/* <div className="absolute top-1 left-30"> */}
+> 
+      <div className="absolute top-5 right-3 sm:top-10 sm:right-15 z-50">
       <LanguageSelector />
-        {/* </div> */}
+      </div>
       <div className="text-center absolute top-5 sm:top-20 pl-5 sm:pl-20 w-full">
           <img
             src={getSvgLogoByLanguage()}

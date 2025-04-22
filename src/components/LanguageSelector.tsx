@@ -34,7 +34,7 @@ const LanguageSelector: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute top-15 right-3 sm:top-20 sm:right-15 z-50" ref={menuRef}>
+    <div  ref={menuRef}>
       <div className="relative">
         <button
           onClick={() => setOpen(!open)}

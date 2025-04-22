@@ -47,7 +47,9 @@ const Section1: React.FC = () => {
   return (
     <section className="w-full py-3 static z-1 sm:min-h-[115vh] sm:py-0 h-full bg-cover flex justify-center items-center" style={{ backgroundImage: `url(${img1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
       <div className="flex flex-row flex-wrap w-[100%] h-full">
+      <div className="absolute top-15 right-3 sm:top-20 sm:right-10 z-50">
         <LanguageSelector />
+      </div>
         
         {/* Parte izquierda */}
         <div className="w-1/2 flex flex-col p-[5%] relative space-y-2 sm:space-y-1 items-start h-full">
