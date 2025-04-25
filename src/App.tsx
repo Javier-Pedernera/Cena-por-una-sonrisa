@@ -11,7 +11,7 @@ import { isAdmin, isAuthenticated } from './utils/authHelpers';
 const App: React.FC = () => {
   const isUserAuthenticated = isAuthenticated();
   const isUserAdmin = isAdmin();
-    console.log("esta autenticado?",isUserAuthenticated,"es admin?", isUserAdmin);
+    // console.log("esta autenticado?",isUserAuthenticated,"es admin?", isUserAdmin);
 
   return (
     <div className="w-full h-full">

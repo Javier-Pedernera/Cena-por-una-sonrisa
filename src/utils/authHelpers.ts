@@ -5,7 +5,7 @@ export function isAuthenticated(): boolean {
   
   export const isAdmin = (): boolean => {
     const user = localStorage.getItem('user');
-    console.log("user en is admin", user);
+    // console.log("user en is admin", user);
     
     if (!user) return false;
     try {

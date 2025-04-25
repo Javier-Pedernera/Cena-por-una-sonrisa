@@ -52,7 +52,7 @@ const DinnerForm: React.FC = () => {
   const [formMessage, setFormMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [errors, setErrors] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const API_URL = import.meta.env.VITE_API_URL;
 
   console.log(" errors",errors);
@@ -95,7 +95,7 @@ const DinnerForm: React.FC = () => {
   const handleCountryChange = (option: CountryOption | null) => {
     setSelectedCountry(option);
   };
-console.log("form",FormData,"formMessage",formMessage);
+// console.log("form",FormData,"formMessage",formMessage);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -142,6 +142,7 @@ console.log("form",FormData,"formMessage",formMessage);
       nombres_acompanantes: nombresAcompanantes,
       detalles,
       email,
+      recaptcha_token: recaptchaToken,
     };
         // console.log("datos a enviar", payload);
         setIsLoading(true);   
@@ -347,10 +348,16 @@ console.log("form",FormData,"formMessage",formMessage);
 
   {/* Captcha */}
   <div className="flex justify-center">
-    <ReCAPTCHA
+      <ReCAPTCHA
       sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-      onChange={() => setCaptchaValid(true)}
-      onExpired={() => setCaptchaValid(false)}
+      onChange={(token) => {
+        setCaptchaValid(!!token);
+        setRecaptchaToken(token); // <- Aquí guardamos el token para enviarlo
+      }}
+      onExpired={() => {
+        setCaptchaValid(false);
+        setRecaptchaToken(null);
+      }}
     />
   </div>
 
