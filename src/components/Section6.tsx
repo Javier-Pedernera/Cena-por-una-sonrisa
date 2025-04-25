@@ -80,10 +80,10 @@ const Section6: React.FC = () => {
             className="absolute top-[-15%] left-[90%] sm:top-[-13%] sm:left-[90%] w-[7%] sm:w-[15%]"
           />
           <p className="absolute top-[45%] left-[15%] sm:top-[5%] sm:left-[0%]  text-white text-[2rem] sm:text-[5.8rem] font-extrabold">
-            Detalles
+          {t("section6_title")}
           </p>
           <p className="absolute top-[60%] left-[35%] sm:top-[24%] sm:left-[30%] text-white text-[2rem] sm:text-[4rem] font-extrabold">
-            del evento
+          {t("section6_subtitle")}
           </p>
 
           {/* Logos acomodados en dos filas */}

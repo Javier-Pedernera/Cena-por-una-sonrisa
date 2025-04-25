@@ -1,7 +1,9 @@
 import React from 'react';
 import img1 from '../assets/images/pngfondosimagenes-01bis.png';
 import svg1 from '../assets/images/logosyvectores-01oro.svg';
-import svg2 from '../assets/images/logosyvectores-02.svg';
+import svgLogoLocaEs from '../assets/images/logosyvectores-02.svg';
+import svgLogoLocaEn from '../assets/images/logosyvectores-02-eng.svg';
+import svgLogoLocaIt from '../assets/images/logosyvectores-02-ita.svg';
 import svg3 from '../assets/images/logosyvectores-05.svg';
 import svg4 from '../assets/images/logosyvectores-06.svg';
 import svgLogoEs from '../assets/images/logosyvectores-03.svg'; 
@@ -19,18 +21,17 @@ const Section1: React.FC = () => {
   const { i18n } = useTranslation();
 
 
-  // const getSvgTicketeraByLanguage = () => {
-  //   switch (i18n.language) {
-  //     case 'en':
-  //       return svgTicketeraEn;
-  //     case 'it':
-  //       return svgTicketeraIt;
-  //     case 'es':
-  //     default:
-  //       return svgTicketeraEs;
-  //   }
-  // };
-
+  const getSvgLogoLoca = () => {
+    switch (i18n.language) {
+      case 'en':
+        return svgLogoLocaEn;
+      case 'it':
+        return svgLogoLocaIt;
+      case 'es':
+      default:
+        return svgLogoLocaEs;
+    }
+  };
   const getSvgLogoByLanguage = () => {
     switch (i18n.language) {
       case 'en':
@@ -55,7 +56,7 @@ const Section1: React.FC = () => {
         <div className="w-1/2 flex flex-col p-[5%] relative space-y-2 sm:space-y-1 items-start h-full">
           {/* SVG 1 y SVG 2 al lado izquierdo */}
           <div className="flex flex-col">
-            <img src={svg2} alt="SVG 2" className="w-15 mb-2 sm:mb-5 sm:w-55 h-auto" />
+            <img src={getSvgLogoLoca()} alt="SVG 2" className="w-15 mb-2 sm:mb-5 sm:w-55 h-auto" />
             <img src={svg1} alt="Imagen pequeña 1" className="w-5 sm:w-20 h-auto" />
           </div>
 
@@ -64,24 +65,7 @@ const Section1: React.FC = () => {
             <img src={svg3} alt="SVG 3" className="absolute w-6 sm:w-20 h-auto left-[20%] top-[70%] sm:left-[22%] sm:top-[42%]" />
             <img src={svg4} alt="SVG 4" className="absolute w-6 sm:w-20 h-auto left-[5%] top-[95%] sm:right-[25%] sm:top-[55%]" />
             
-            {/* Botón de entrada */}
-            {/* <motion.a
-              href="https://live.tickethoy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:block absolute w-15 sm:w-50 h-auto left-[8%] -bottom-[45%] sm:left-[10%] sm:bottom-[10%]"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.5 }}
-              whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-              whileTap={{ scale: 0.98 }}
-            >
-             <img
-              src={getSvgTicketeraByLanguage()}
-              alt="Ticketera"
-              className="w-full h-auto transition-all duration-300 ease-in-out hover:scale-101 hover:drop-shadow-[0_0_4px_rgba(255,215,0,0.6)]"
-            />
-            </motion.a> */}
+           
           </div>
         </div>
 
