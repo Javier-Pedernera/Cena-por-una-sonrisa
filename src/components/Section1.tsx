@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import img1 from '../assets/images/pngfondosimagenes-01bis.png';
+import img1Low from '../assets/images/pngfondosimagenes-01bis-low.png';
 import svg1 from '../assets/images/logosyvectores-01oro.svg';
 import svgLogoLocaEs from '../assets/images/logosyvectores-02.svg';
 import svgLogoLocaEn from '../assets/images/logosyvectores-02-eng.svg';
@@ -19,7 +20,13 @@ import LanguageSelector from './LanguageSelector';
 
 const Section1: React.FC = () => {
   const { i18n } = useTranslation();
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = img1;
+    img.onload = () => setBackgroundLoaded(true);
+  }, []);
 
   const getSvgLogoLoca = () => {
     switch (i18n.language) {
@@ -46,7 +53,10 @@ const Section1: React.FC = () => {
 
 
   return (
-    <section className="w-full py-3 static z-1 sm:min-h-[115vh] sm:py-0 h-full bg-cover flex justify-center items-center" style={{ backgroundImage: `url(${img1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}>
+    <section className="w-full py-3 static z-1 sm:min-h-[115vh] sm:py-0 h-full bg-cover flex justify-center items-center" 
+    style={{ backgroundImage: `url(${backgroundLoaded ? img1 : img1Low})`,
+     backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain' }}>
       <div className="flex flex-row flex-wrap w-[100%] h-full">
       <div className="absolute top-15 right-3 sm:top-20 sm:right-10 z-50">
         <LanguageSelector />
