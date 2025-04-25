@@ -70,7 +70,7 @@ const Section13: React.FC = () => {
           custom={0.3}
         >
           <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
-          <p className="text-white">Hello@unamanoporunasonrisa.com</p>
+          <p className="text-white">{t("section13_email")}</p>
           <br />
           <a
             href="https://www.loca-agency.com/"

@@ -43,7 +43,7 @@ const Section2: React.FC = () => {
 
     {/* Parte derecha con el texto animado */}
     <motion.div
-      className="w-full sm:w-1/2 sm:w-[50%] flex justify-center items-center text-left"
+      className="w-full sm:w-1/2 flex justify-center items-center text-left"
       initial={{ opacity: 0, x: 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
