@@ -1,7 +1,7 @@
 import React from 'react';
 import mainImage from '../assets/images/pngfondosimagenes-07.png';
-import overlayImage1 from '../assets/images/logosyvectores-05.svg';
-import overlayImage2 from '../assets/images/logosyvectores-06.svg';
+// import overlayImage1 from '../assets/images/logosyvectores-05.svg';
+// import overlayImage2 from '../assets/images/logosyvectores-06.svg';
 import { useTranslation } from 'react-i18next';
 
 const Section7: React.FC = () => {
@@ -11,7 +11,7 @@ const Section7: React.FC = () => {
       {/* Lado Izquierdo - Imágenes */}
       <div className="w-full sm:w-1/2 relative  sm:h-full">
         <img src={mainImage} alt="Fondo" className="w-full sm:w-[100%] h-full object-cover" />
-        <img 
+        {/* <img 
           src={overlayImage1} 
           alt="Imagen 1" 
           className="absolute top-10 left-[10%] sm:left-[40%] w-20 sm:w-30"
@@ -20,7 +20,7 @@ const Section7: React.FC = () => {
           src={overlayImage2} 
           alt="Imagen 2" 
           className="absolute bottom-10 left-[62%] sm:left-[60%] w-20 sm:w-30"
-        />
+        /> */}
       </div>
 
       {/* Lado Derecho - Texto */}
