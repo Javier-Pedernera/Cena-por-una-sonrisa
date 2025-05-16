@@ -12,21 +12,21 @@ const Section9: React.FC = () => {
       }}
     >
       {/* Contenido centrado */}
-      <div className="relative z-10 text-center px-4 max-w-xl">
+      <div className="relative z-10 text-center sm:px-4 max-w-xl">
       
       </div>
       {/* Estrella 1 */}
       <img
         src={star1}
         alt="Estrella 1"
-        className="absolute w-12 sm:w-25 top-2 right-12 sm:top-10 sm:right-60 animate-twinkle"
+        className="absolute w-10 sm:w-25 top-2 right-12 sm:top-10 sm:right-60 animate-twinkle"
       />
 
       {/* Estrella 2 */}
       <img
         src={star2}
         alt="Estrella 2"
-        className="absolute w-12 sm:w-25 top-22 right-24 sm:top-30 sm:right-100 animate-twinkle"
+        className="absolute w-10 sm:w-25 top-22 right-24 sm:top-30 sm:right-100 animate-twinkle"
       />
 
       {/* Animación titileo */}
