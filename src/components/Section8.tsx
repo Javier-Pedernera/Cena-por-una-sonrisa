@@ -30,7 +30,7 @@ const Section8: React.FC = () => {
 // };
 
   return (
-    <section className="w-full  flex flex-col items-center py-10 px-5">
+    <section className="w-full  flex flex-col items-center py-2 sm:py-10 sm:px-5">
       {/* Contenedor principal dividido en dos */}
       <div className="w-full relative flex flex-row sm:flex-row items-center justify-between mb-10">
         {/* Título en columna */}
