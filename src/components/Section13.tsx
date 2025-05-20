@@ -70,7 +70,11 @@ const Section13: React.FC = () => {
           custom={0.3}
         >
           <h3 className="text-xl font-semibold">{t("section13_subtitle")}</h3>
-          <p className="text-white">{t("section13_email")}</p>
+          <a
+            href={`mailto:${t("section13_email")}`}
+          >
+            <p className="text-white">{t("section13_email")}</p>
+          </a>
           <br />
           <a
             href="https://www.loca-agency.com/"
@@ -80,6 +84,7 @@ const Section13: React.FC = () => {
           >
             <p className="text-white">www.loca-agency.com</p>
           </a>
+
           <a
             href="https://www.534ent.com/"
             target="_blank"
