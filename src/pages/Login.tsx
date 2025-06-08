@@ -30,8 +30,8 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
-      <form onSubmit={handleSubmit} className="bg-[#fcfcfc] border-1 border-[#06C8BE] px-8 py-10 rounded-2xl shadow-lg w-full max-w-md">
+    <div className="flex items-center justify-center h-screen bg-gray-800">
+      <form onSubmit={handleSubmit} className="bg-gray-800 border-1 border-[#06C8BE] px-8 py-10 rounded-2xl shadow-lg w-full max-w-md">
         <div className="flex justify-center">
         <svg
                 className="w-25"

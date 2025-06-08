@@ -14,10 +14,10 @@ const LogoutButton: React.FC = () => {
   return (
     <button
       onClick={handleLogout}
-      className="flex items-center gap-2 text-gray-600 hover:text-red-500 transition-colors duration-200 text-sm ml-auto mb-4"
+      className="flex items-center cursor-pointer gap-2 text-gray-200 hover:text-red-500 transition-colors duration-200 text-sm ml-auto mb-4"
     >
-      <FiLogOut className="text-lg" />
-      <span>Cerrar sesión</span>
+      <FiLogOut className="text-lg " />
+      <span >Cerrar sesión</span>
     </button>
   );
 };
