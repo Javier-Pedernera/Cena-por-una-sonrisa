@@ -90,20 +90,20 @@ const AdminData = () => {
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
   return (
-    <div className="min-h-screen max-w-full mx-auto p-6 flex flex-col justify-between">
+    <div className="min-h-screen bg-gray-800 max-w-full mx-auto p-6 flex flex-col justify-between">
       <div>
         <LogoutButton />
-        <p className="text-[1.4rem] font-semibold mb-4 text-center text-gray-800">Cena por una Sonrisa</p>
+        <p className="text-[1.4rem] font-semibold mb-4 text-center text-white">Cena por una Sonrisa</p>
   
         {/* Filtros */}
-        <div className="w-full bg-white mb-4">
+        <div className="w-full bg-white rounded-lg ">
           <div className="flex flex-col gap-4 sm:flex-row md:flex-row md:flex-wrap md:items-center">
             <Filter filters={filters} onFilterChange={handleFilterChange} />
           </div>
         </div>
   
         {/* Tabla */}
-        <div className="bg-white shadow-lg rounded-lg p-6 mb-6 overflow-x-auto grow">
+        <div className="bg-white shadow-lg rounded-lg p-2 mb-6 overflow-x-auto grow">
           <Table data={currentItems} />
         </div>
       </div>
@@ -112,18 +112,18 @@ const AdminData = () => {
       <div className="flex justify-between items-center mt-auto border-t pt-6">
   <button
     onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-    className="px-5 py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
+    className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
   >
     ← Anterior
   </button>
 
-  <span className="text-base text-gray-600 font-medium">
+  <span className="text-base text-white font-medium">
     Página {currentPage} de {totalPages}
   </span>
 
   <button
     onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-    className="px-5 py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
+    className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
   >
     Siguiente →
   </button>
