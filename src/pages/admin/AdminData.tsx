@@ -5,6 +5,7 @@ import { formatDate } from "../../utils/helpers";
 import { Filter } from "../../components/admin/Filter";
 import { Table } from "../../components/admin/Table";
 import { GiBroom } from "react-icons/gi";
+import logo from '../../assets/images/logosyvectores-03_eng.svg';
 
 const AdminData = () => {
   const [data, setData] = useState<any[]>([]);
@@ -106,9 +107,17 @@ const AdminData = () => {
 
   return (
     <div className="min-h-screen bg-gray-800 max-w-full mx-auto p-6 flex flex-col justify-between">
+      <div className="relative flex mt-5 mb-10 items-center justify-between mb-4">
+        <div className="absolute left-1/2  transform -translate-x-1/2">
+          <img src={logo} alt="Logo" className="h-20" />
+        </div>
+        <div className="ml-auto">
+          <LogoutButton />
+        </div>
+      </div>
       <div>
-        <LogoutButton />
-        <p className="text-[1.4rem] font-semibold mb-4 text-center text-white">Cena por una Sonrisa</p>
+        {/* <LogoutButton />
+        <p className="text-[1.4rem] font-semibold mb-4 text-center text-white">Cena por una Sonrisa</p> */}
 
         {/* Filtros */}
         <div className="w-full bg-white rounded-lg">
@@ -116,7 +125,7 @@ const AdminData = () => {
           <Filter filters={filters} onFilterChange={handleFilterChange} />
           <button
   onClick={handleClearFilters}
-  className="px-4 py-3 bg-[#1D2938] cursor-pointer text-[#06C8BE] hover:text-[#08dbcd] rounded-md hover:bg-[#0c1219] transition duration-200 flex items-center justify-center shadow-md"
+  className="px-4 py-3 bg-[#1D2938] cursor-pointer text-[#BC843E] hover:text-[#d19142] rounded-md hover:bg-[#0c1219] transition duration-200 flex items-center justify-center shadow-md"
   title="Limpiar filtros"
 >
   <GiBroom className="h-6 w-6" />
