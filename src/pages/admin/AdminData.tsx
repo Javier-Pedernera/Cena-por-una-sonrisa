@@ -4,10 +4,12 @@ import LogoutButton from "../../components/LogoutButton";
 import { formatDate } from "../../utils/helpers";
 import { Filter } from "../../components/admin/Filter";
 import { Table } from "../../components/admin/Table";
+import { GiBroom } from "react-icons/gi";
 
 const AdminData = () => {
   const [data, setData] = useState<any[]>([]);
   const [filteredData, setFilteredData] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [filters, setFilters] = useState({
     country: "",
     email: "",
@@ -33,7 +35,8 @@ const AdminData = () => {
         setData(res.data);
         setFilteredData(res.data);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false));
   }, []);
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -89,48 +92,75 @@ const AdminData = () => {
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
+  const handleClearFilters = () => {
+  setFilters({
+    country: "",
+    email: "",
+    date: "",
+    guests: "",
+    cenaName: "",
+    foodType: "",
+  });
+  setCurrentPage(1);
+};
+
   return (
     <div className="min-h-screen bg-gray-800 max-w-full mx-auto p-6 flex flex-col justify-between">
       <div>
         <LogoutButton />
         <p className="text-[1.4rem] font-semibold mb-4 text-center text-white">Cena por una Sonrisa</p>
-  
+
         {/* Filtros */}
-        <div className="w-full bg-white rounded-lg ">
-          <div className="flex flex-col gap-4 sm:flex-row md:flex-row md:flex-wrap md:items-center">
-            <Filter filters={filters} onFilterChange={handleFilterChange} />
-          </div>
+        <div className="w-full bg-white rounded-lg">
+          <div className="flex flex-col sm:flex-row md:flex-row  md:items-center gap-2 justify-between p-2">
+          <Filter filters={filters} onFilterChange={handleFilterChange} />
+          <button
+  onClick={handleClearFilters}
+  className="px-4 py-3 bg-[#1D2938] cursor-pointer text-[#06C8BE] hover:text-[#08dbcd] rounded-md hover:bg-[#0c1219] transition duration-200 flex items-center justify-center shadow-md"
+  title="Limpiar filtros"
+>
+  <GiBroom className="h-6 w-6" />
+</button>
         </div>
-  
-        {/* Tabla */}
-        <div className="bg-white shadow-lg rounded-lg p-2 mb-6 overflow-x-auto grow">
-          <Table data={currentItems} />
+        </div>
+
+        {/* Tabla o Loader */}
+        <div className="bg-white shadow-lg rounded-lg p-2 mb-6 overflow-x-auto grow min-h-[200px] flex items-center justify-center">
+          {loading ? (
+            <div className="flex justify-center items-center w-full py-10">
+              <div className="w-8 h-8 border-4 border-yellow-400 border-dashed rounded-full animate-spin"></div>
+              <span className="ml-4 text-gray-600 text-sm">Cargando datos...</span>
+            </div>
+          ) : (
+            <Table data={currentItems} />
+          )}
         </div>
       </div>
-  
-      {/* Paginación abajo */}
-      <div className="flex justify-between items-center mt-auto border-t pt-6">
-  <button
-    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-    className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
-  >
-    ← Anterior
-  </button>
 
-  <span className="text-base text-white font-medium">
-    Página {currentPage} de {totalPages}
-  </span>
+      {/* Paginación */}
+      {!loading && (
+        <div className="flex justify-between items-center mt-auto border-t pt-6">
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
+          >
+            ← Anterior
+          </button>
 
-  <button
-    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-    className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
-  >
-    Siguiente →
-  </button>
-</div>
+          <span className="text-base text-white font-medium">
+            Página {currentPage} de {totalPages}
+          </span>
+
+          <button
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+            className="px-5 cursor-pointer py-2 rounded-md border border-gray-300 text-gray-700 bg-white hover:bg-gray-100 transition-colors duration-200"
+          >
+            Siguiente →
+          </button>
+        </div>
+      )}
     </div>
   );
-  
 };
 
 export default AdminData;
